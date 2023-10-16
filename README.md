@@ -16,7 +16,7 @@ const birthYear = 1990; // Replace with the desired birth year
 const chineseZodiac = getChineseZodiac(birthYear);
 console.log(`Chinese zodiac sign: ${chineseZodiac}`);
 ```
-
+နက္ခတ်ရာသီခွင်နှင့်ပတ်သက်သော Logic များကိုဤတွင်ကြည့်ရှုနိုင်ပါသည်
 ```javascript
 function getHoroscope(birthDate) {
     const day = birthDate.getDate();
