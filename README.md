@@ -1,5 +1,5 @@
 # Zodiac
-
+တရုတ်ရာသီခွင့်နှင့်ပတ်သတ်သော Logic ကို ဤတွင်ကြည့်ရှုနိုင်ပါသည်
 ```javascript
 function getChineseZodiac(birthYear) {
     const startYear = 1900; // Start year of the Chinese zodiac cycle
