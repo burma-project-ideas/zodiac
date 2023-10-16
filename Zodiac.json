@@ -53,7 +53,7 @@
 		{
 			"Id": 1,
 			"ZodiacSignImageUrl": "images/zodiac-signs/h1.svg",
-			"ZodiacSign2ImageUrl": "images/zodiac-signs-2/aries.webp",
+			"ZodiacSign2ImageUrl": "images/zodiac-signs-2/aries.jpg",
 			"Dates": "March 21 - April 19",
 			"Element": "Fire",
 			"ElementImageUrl": "images/elements/fire.png",
@@ -83,7 +83,7 @@
 		{
 			"Id": 2,
 			"ZodiacSignImageUrl": "images/zodiac-signs/h2.svg",
-			"ZodiacSign2ImageUrl": "images/zodiac-signs-2/taurus.webp",
+			"ZodiacSign2ImageUrl": "images/zodiac-signs-2/taurus.jpg",
 			"Dates": "April 20 - May 20",
 			"Element": "Earth",
 			"ElementImageUrl": "images/elements/earth.png",
@@ -113,7 +113,7 @@
 		{
 			"Id": 3,
 			"ZodiacSignImageUrl": "images/zodiac-signs/h3.svg",
-			"ZodiacSign2ImageUrl": "images/zodiac-signs-2/gemini.webp",
+			"ZodiacSign2ImageUrl": "images/zodiac-signs-2/gemini.jpg",
 			"Dates": "May 21 - June 20",
 			"Element": "Air",
 			"ElementImageUrl": "images/elements/air.png",
@@ -143,7 +143,7 @@
 		{
 			"Id": 4,
 			"ZodiacSignImageUrl": "images/zodiac-signs/h4.svg",
-			"ZodiacSign2ImageUrl": "images/zodiac-signs-2/cancer.webp",
+			"ZodiacSign2ImageUrl": "images/zodiac-signs-2/cancer.jpg",
 			"Dates": "June 21 - July 22",
 			"Element": "Water",
 			"ElementImageUrl": "images/elements/water.png",
@@ -173,7 +173,7 @@
 		{
 			"Id": 5,
 			"ZodiacSignImageUrl": "images/zodiac-signs/h5.svg",
-			"ZodiacSign2ImageUrl": "images/zodiac-signs-2/leo.webp",
+			"ZodiacSign2ImageUrl": "images/zodiac-signs-2/leo.jpg",
 			"Dates": "July 23 - August 22",
 			"Element": "Fire",
 			"ElementImageUrl": "images/elements/fire.png",
@@ -203,7 +203,7 @@
 		{
 			"Id": 6,
 			"ZodiacSignImageUrl": "images/zodiac-signs/h6.svg",
-			"ZodiacSign2ImageUrl": "images/zodiac-signs-2/virgo.webp",
+			"ZodiacSign2ImageUrl": "images/zodiac-signs-2/virgo.jpg",
 			"Dates": "August 23 - September 22",
 			"Element": "Earth",
 			"ElementImageUrl": "images/elements/earth.png",
@@ -233,7 +233,7 @@
 		{
 			"Id": 7,
 			"ZodiacSignImageUrl": "images/zodiac-signs/h7.svg",
-			"ZodiacSign2ImageUrl": "images/zodiac-signs-2/libra.webp",
+			"ZodiacSign2ImageUrl": "images/zodiac-signs-2/libra.jpg",
 			"Dates": "September 23 - October 22",
 			"Element": "Air",
 			"ElementImageUrl": "images/elements/air.png",
@@ -263,7 +263,7 @@
 		{
 			"Id": 8,
 			"ZodiacSignImageUrl": "images/zodiac-signs/h8.svg",
-			"ZodiacSign2ImageUrl": "images/zodiac-signs-2/scorpio.webp",
+			"ZodiacSign2ImageUrl": "images/zodiac-signs-2/scorpio.jpg",
 			"Dates": "October 23 - November 21",
 			"Element": "Water",
 			"ElementImageUrl": "images/elements/water.png",
@@ -293,7 +293,7 @@
 		{
 			"Id": 9,
 			"ZodiacSignImageUrl": "images/zodiac-signs/h9.svg",
-			"ZodiacSign2ImageUrl": "images/zodiac-signs-2/sagittarius.webp",
+			"ZodiacSign2ImageUrl": "images/zodiac-signs-2/sagittarius.jpg",
 			"Dates": "November 22 - December 21",
 			"Element": "Fire",
 			"ElementImageUrl": "images/elements/fire.png",
@@ -323,7 +323,7 @@
 		{
 			"Id": 10,
 			"ZodiacSignImageUrl": "images/zodiac-signs/h10.svg",
-			"ZodiacSign2ImageUrl": "images/zodiac-signs-2/capricorn.webp",
+			"ZodiacSign2ImageUrl": "images/zodiac-signs-2/capricorn.jpg",
 			"Dates": "December 22 - January 19",
 			"Element": "Earth",
 			"ElementImageUrl": "images/elements/earth.png",
@@ -353,7 +353,7 @@
 		{
 			"Id": 11,
 			"ZodiacSignImageUrl": "images/zodiac-signs/h11.svg",
-			"ZodiacSign2ImageUrl": "images/zodiac-signs-2/aquarius.webp",
+			"ZodiacSign2ImageUrl": "images/zodiac-signs-2/aquarius.jpg",
 			"Dates": "January 20 - February 18",
 			"Element": "Air",
 			"ElementImageUrl": "images/elements/air.png",
@@ -383,7 +383,7 @@
 		{
 			"Id": 12,
 			"ZodiacSignImageUrl": "images/zodiac-signs/h12.svg",
-			"ZodiacSign2ImageUrl": "images/zodiac-signs-2/pisces.webp",
+			"ZodiacSign2ImageUrl": "images/zodiac-signs-2/pisces.jpg",
 			"Dates": "February 19 - March 20",
 			"Element": "Water",
 			"ElementImageUrl": "images/elements/water.png",
