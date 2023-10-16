@@ -3,6 +3,8 @@
 
 ![Alt text](https://github.com/sannlynnhtun-coding/Zodiac/blob/main/wallpaper.jpg)
 
+ပုံများ အား [mindmaestro.co.uk](https://www.mindmaestro.co.uk/zodiac-art) မှယူထားပါသည်။
+
 တရုတ်ရာသီခွင့်နှင့်ပတ်သတ်သော Logic ကို ဤတွင်ကြည့်ရှုနိုင်ပါသည်
 ```javascript
 function getChineseZodiac(birthYear) {
