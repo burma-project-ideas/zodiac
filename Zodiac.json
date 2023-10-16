@@ -1,0 +1,402 @@
+{
+	"ZodiacSigns": [
+		{
+			"Id": 1,
+			"Name": "Aries"
+		},
+		{
+			"Id": 2,
+			"Name": "Taurus"
+		},
+		{
+			"Id": 3,
+			"Name": "Gemini"
+		},
+		{
+			"Id": 4,
+			"Name": "Cancer"
+		},
+		{
+			"Id": 5,
+			"Name": "Leo"
+		},
+		{
+			"Id": 6,
+			"Name": "Virgo"
+		},
+		{
+			"Id": 7,
+			"Name": "Libra"
+		},
+		{
+			"Id": 8,
+			"Name": "Scorpio"
+		},
+		{
+			"Id": 9,
+			"Name": "Sagittarius"
+		},
+		{
+			"Id": 10,
+			"Name": "Capricorn"
+		},
+		{
+			"Id": 11,
+			"Name": "Aquarius"
+		},
+		{
+			"Id": 12,
+			"Name": "Pisces"
+		}
+	],
+	"ZodiacSignsDetail": [
+		{
+			"Id": 1,
+			"ZodiacSignImageUrl": "images/zodiac-signs/h1.svg",
+			"Dates": "March 21 - April 19",
+			"Element": "Fire",
+			"ElementImageUrl": "images/elements/fire.png",
+			"Traits": [
+				{
+					"Name": "Courageous",
+					"Percentage": 80
+				},
+				{
+					"Name": "Confident",
+					"Percentage": 70
+				},
+				{
+					"Name": "Energetic",
+					"Percentage": 90
+				},
+				{
+					"Name": "Impulsive",
+					"Percentage": 60
+				},
+				{
+					"Name": "Passionate",
+					"Percentage": 75
+				}
+			]
+		},
+		{
+			"Id": 2,
+			"ZodiacSignImageUrl": "images/zodiac-signs/h2.svg",
+			"Dates": "April 20 - May 20",
+			"Element": "Earth",
+			"ElementImageUrl": "images/elements/earth.png",
+			"Traits": [
+				{
+					"Name": "Reliable",
+					"Percentage": 70
+				},
+				{
+					"Name": "Patient",
+					"Percentage": 80
+				},
+				{
+					"Name": "Practical",
+					"Percentage": 75
+				},
+				{
+					"Name": "Stubborn",
+					"Percentage": 85
+				},
+				{
+					"Name": "Sensual",
+					"Percentage": 65
+				}
+			]
+		},
+		{
+			"Id": 3,
+			"ZodiacSignImageUrl": "images/zodiac-signs/h3.svg",
+			"Dates": "May 21 - June 20",
+			"Element": "Air",
+			"ElementImageUrl": "images/elements/air.png",
+			"Traits": [
+				{
+					"Name": "Adaptable",
+					"Percentage": 75
+				},
+				{
+					"Name": "Curious",
+					"Percentage": 85
+				},
+				{
+					"Name": "Intellectual",
+					"Percentage": 80
+				},
+				{
+					"Name": "Inconsistent",
+					"Percentage": 60
+				},
+				{
+					"Name": "Social",
+					"Percentage": 90
+				}
+			]
+		},
+		{
+			"Id": 4,
+			"ZodiacSignImageUrl": "images/zodiac-signs/h4.svg",
+			"Dates": "June 21 - July 22",
+			"Element": "Water",
+			"ElementImageUrl": "images/elements/water.png",
+			"Traits": [
+				{
+					"Name": "Loyal",
+					"Percentage": 85
+				},
+				{
+					"Name": "Emotional",
+					"Percentage": 75
+				},
+				{
+					"Name": "Intuitive",
+					"Percentage": 80
+				},
+				{
+					"Name": "Moody",
+					"Percentage": 70
+				},
+				{
+					"Name": "Protective",
+					"Percentage": 90
+				}
+			]
+		},
+		{
+			"Id": 5,
+			"ZodiacSignImageUrl": "images/zodiac-signs/h5.svg",
+			"Dates": "July 23 - August 22",
+			"Element": "Fire",
+			"ElementImageUrl": "images/elements/fire.png",
+			"Traits": [
+				{
+					"Name": "Generous",
+					"Percentage": 80
+				},
+				{
+					"Name": "Creative",
+					"Percentage": 85
+				},
+				{
+					"Name": "Warm-hearted",
+					"Percentage": 75
+				},
+				{
+					"Name": "Arrogant",
+					"Percentage": 65
+				},
+				{
+					"Name": "Dominant",
+					"Percentage": 70
+				}
+			]
+		},
+		{
+			"Id": 6,
+			"ZodiacSignImageUrl": "images/zodiac-signs/h6.svg",
+			"Dates": "August 23 - September 22",
+			"Element": "Earth",
+			"ElementImageUrl": "images/elements/earth.png",
+			"Traits": [
+				{
+					"Name": "Analytical",
+					"Percentage": 90
+				},
+				{
+					"Name": "Practical",
+					"Percentage": 85
+				},
+				{
+					"Name": "Modest",
+					"Percentage": 70
+				},
+				{
+					"Name": "Overcritical",
+					"Percentage": 80
+				},
+				{
+					"Name": "Reliable",
+					"Percentage": 75
+				}
+			]
+		},
+		{
+			"Id": 7,
+			"ZodiacSignImageUrl": "images/zodiac-signs/h7.svg",
+			"Dates": "September 23 - October 22",
+			"Element": "Air",
+			"ElementImageUrl": "images/elements/air.png",
+			"Traits": [
+				{
+					"Name": "Diplomatic",
+					"Percentage": 75
+				},
+				{
+					"Name": "Harmonious",
+					"Percentage": 80
+				},
+				{
+					"Name": "Idealistic",
+					"Percentage": 70
+				},
+				{
+					"Name": "Indecisive",
+					"Percentage": 65
+				},
+				{
+					"Name": "Charming",
+					"Percentage": 85
+				}
+			]
+		},
+		{
+			"Id": 8,
+			"ZodiacSignImageUrl": "images/zodiac-signs/h8.svg",
+			"Dates": "October 23 - November 21",
+			"Element": "Water",
+			"ElementImageUrl": "images/elements/water.png",
+			"Traits": [
+				{
+					"Name": "Passionate",
+					"Percentage": 85
+				},
+				{
+					"Name": "Magnetic",
+					"Percentage": 80
+				},
+				{
+					"Name": "Resolute",
+					"Percentage": 75
+				},
+				{
+					"Name": "Jealous",
+					"Percentage": 70
+				},
+				{
+					"Name": "Secretive",
+					"Percentage": 60
+				}
+			]
+		},
+		{
+			"Id": 9,
+			"ZodiacSignImageUrl": "images/zodiac-signs/h9.svg",
+			"Dates": "November 22 - December 21",
+			"Element": "Fire",
+			"ElementImageUrl": "images/elements/fire.png",
+			"Traits": [
+				{
+					"Name": "Adventurous",
+					"Percentage": 90
+				},
+				{
+					"Name": "Optimistic",
+					"Percentage": 85
+				},
+				{
+					"Name": "Straightforward",
+					"Percentage": 80
+				},
+				{
+					"Name": "Impatient",
+					"Percentage": 70
+				},
+				{
+					"Name": "Versatile",
+					"Percentage": 75
+				}
+			]
+		},
+		{
+			"Id": 10,
+			"ZodiacSignImageUrl": "images/zodiac-signs/h10.svg",
+			"Dates": "December 22 - January 19",
+			"Element": "Earth",
+			"ElementImageUrl": "images/elements/earth.png",
+			"Traits": [
+				{
+					"Name": "Ambitious",
+					"Percentage": 80
+				},
+				{
+					"Name": "Disciplined",
+					"Percentage": 85
+				},
+				{
+					"Name": "Prudent",
+					"Percentage": 75
+				},
+				{
+					"Name": "Pessimistic",
+					"Percentage": 60
+				},
+				{
+					"Name": "Determined",
+					"Percentage": 70
+				}
+			]
+		},
+		{
+			"Id": 11,
+			"ZodiacSignImageUrl": "images/zodiac-signs/h11.svg",
+			"Dates": "January 20 - February 18",
+			"Element": "Air",
+			"ElementImageUrl": "images/elements/air.png",
+			"Traits": [
+				{
+					"Name": "Independent",
+					"Percentage": 80
+				},
+				{
+					"Name": "Intellectual",
+					"Percentage": 85
+				},
+				{
+					"Name": "Unconventional",
+					"Percentage": 75
+				},
+				{
+					"Name": "Stubborn",
+					"Percentage": 70
+				},
+				{
+					"Name": "Humanitarian",
+					"Percentage": 90
+				}
+			]
+		},
+		{
+			"Id": 12,
+			"ZodiacSignImageUrl": "images/zodiac-signs/h12.svg",
+			"Dates": "February 19 - March 20",
+			"Element": "Water",
+			"ElementImageUrl": "images/elements/water.png",
+			"Traits": [
+				{
+					"Name": "Compassionate",
+					"Percentage": 85
+				},
+				{
+					"Name": "Intuitive",
+					"Percentage": 80
+				},
+				{
+					"Name": "Artistic",
+					"Percentage": 75
+				},
+				{
+					"Name": "Escapist",
+					"Percentage": 60
+				},
+				{
+					"Name": "Sensitive",
+					"Percentage": 70
+				}
+			]
+		}
+	]
+}
