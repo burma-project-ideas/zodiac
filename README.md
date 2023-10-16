@@ -16,7 +16,7 @@ const birthYear = 1990; // Replace with the desired birth year
 const chineseZodiac = getChineseZodiac(birthYear);
 console.log(`Chinese zodiac sign: ${chineseZodiac}`);
 ```
-
+နက္ခတ်ရာသီခွင်နှင့်ပတ်သက်သော Logic များကိုဤတွင်ကြည့်ရှုနိုင်ပါသည်
 ```javascript
 function getHoroscope(birthDate) {
     const day = birthDate.getDate();
@@ -60,3 +60,22 @@ try {
     console.error(error.message);
 }
 ```
+
+<table>
+ <thead>
+  <tr>
+   <th colspan="11">Contributors</th>
+  </tr>
+ </thead>
+    <tbody>
+        <tr>
+            <td><a href="https://github.com/sannlynnhtun-coding"><img src="https://github.com/sannlynnhtun-coding.png" width="60px;"/></a></td>
+            <td><a href="https://github.com/OatSoeKhant-Coding"><img src="https://github.com/OatSoeKhant-Coding.png" width="60px;"/></a></td>
+            <td><a href="https://github.com/Rasunon-Soare"><img src="https://github.com/Rasunon-Soare.png" width="60px;"/></a></td>
+            <td><a href="https://github.com/dabria2004"><img src="https://github.com/dabria2004.png" width="60px;"/></a></td>
+            <td><a href="https://github.com/mgchit-coding"><img src="https://github.com/mgchit-coding.png" width="60px;"/></a></td>
+            <td><a href="https://github.com/myatphonekhant-developer"><img src="https://github.com/myatphonekhant-developer.png" width="60px;"/></a></td>
+            <td><a href="https://github.com/MyatPhoneThant"><img src="https://github.com/MyatPhoneThant.png" width="60px;"/></a></td>
+        </tr>
+    </tbody>
+</table>
