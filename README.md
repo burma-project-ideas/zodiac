@@ -5,6 +5,10 @@
 
 ပုံများ အား [mindmaestro.co.uk](https://www.mindmaestro.co.uk/zodiac-art) မှယူသုံးထားပါသည်။
 
+1. စစခြင်း page တွင် Zodiac Signs များကို ပြသထားပါသည်။ ZodiacSigns JSON မှ ဖော်ပြနိုင်ပါသည်။ 
+2. ကိုယ်သိချင်သော မွေးနေ့ကိုလဲ ရိုက်ထည့်ကာ သို့မဟုတ် Date Picker ဖြင့်ရွေးချယ်နိုင်ပါသည်။ ZodiacSignsDetail JSON မှဖော်ပြနိုင်ပါသည်။
+   
+
 တရုတ်ရာသီခွင့်နှင့်ပတ်သတ်သော Logic ကို ဤတွင်ကြည့်ရှုနိုင်ပါသည်
 ```javascript
 function getChineseZodiac(birthYear) {
