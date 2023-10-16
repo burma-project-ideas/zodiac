@@ -1,0 +1,338 @@
+﻿[
+  {
+    "Name": "Aries",
+    "ImageUrl": "images/h1.svg",
+    "Dates": "March 21 - April 19",
+    "Element": "Fire",
+    "Traits": [
+      {
+        "Name": "Courageous",
+        "Percentage": 80
+      },
+      {
+        "Name": "Confident",
+        "Percentage": 70
+      },
+      {
+        "Name": "Energetic",
+        "Percentage": 90
+      },
+      {
+        "Name": "Impulsive",
+        "Percentage": 60
+      },
+      {
+        "Name": "Passionate",
+        "Percentage": 75
+      }
+    ]
+  },
+  {
+    "Name": "Taurus",
+    "ImageUrl": "images/h2.svg",
+    "Dates": "April 20 - May 20",
+    "Element": "Earth",
+    "Traits": [
+      {
+        "Name": "Reliable",
+        "Percentage": 70
+      },
+      {
+        "Name": "Patient",
+        "Percentage": 80
+      },
+      {
+        "Name": "Practical",
+        "Percentage": 75
+      },
+      {
+        "Name": "Stubborn",
+        "Percentage": 85
+      },
+      {
+        "Name": "Sensual",
+        "Percentage": 65
+      }
+    ]
+  },
+  {
+    "Name": "Gemini",
+    "ImageUrl": "images/h3.svg",
+    "Dates": "May 21 - June 20",
+    "Element": "Air",
+    "Traits": [
+      {
+        "Name": "Adaptable",
+        "Percentage": 75
+      },
+      {
+        "Name": "Curious",
+        "Percentage": 85
+      },
+      {
+        "Name": "Intellectual",
+        "Percentage": 80
+      },
+      {
+        "Name": "Inconsistent",
+        "Percentage": 60
+      },
+      {
+        "Name": "Social",
+        "Percentage": 90
+      }
+    ]
+  },
+  {
+    "Name": "Cancer",
+    "ImageUrl": "images/h4.svg",
+    "Dates": "June 21 - July 22",
+    "Element": "Water",
+    "Traits": [
+      {
+        "Name": "Loyal",
+        "Percentage": 85
+      },
+      {
+        "Name": "Emotional",
+        "Percentage": 75
+      },
+      {
+        "Name": "Intuitive",
+        "Percentage": 80
+      },
+      {
+        "Name": "Moody",
+        "Percentage": 70
+      },
+      {
+        "Name": "Protective",
+        "Percentage": 90
+      }
+    ]
+  },
+  {
+    "Name": "Leo",
+    "ImageUrl": "images/h5.svg",
+    "Dates": "July 23 - August 22",
+    "Element": "Fire",
+    "Traits": [
+      {
+        "Name": "Generous",
+        "Percentage": 80
+      },
+      {
+        "Name": "Creative",
+        "Percentage": 85
+      },
+      {
+        "Name": "Warm-hearted",
+        "Percentage": 75
+      },
+      {
+        "Name": "Arrogant",
+        "Percentage": 65
+      },
+      {
+        "Name": "Dominant",
+        "Percentage": 70
+      }
+    ]
+  },
+  {
+    "Name": "Virgo",
+    "ImageUrl": "images/h6.svg",
+    "Dates": "August 23 - September 22",
+    "Element": "Earth",
+    "Traits": [
+      {
+        "Name": "Analytical",
+        "Percentage": 90
+      },
+      {
+        "Name": "Practical",
+        "Percentage": 85
+      },
+      {
+        "Name": "Modest",
+        "Percentage": 70
+      },
+      {
+        "Name": "Overcritical",
+        "Percentage": 80
+      },
+      {
+        "Name": "Reliable",
+        "Percentage": 75
+      }
+    ]
+  },
+  {
+    "Name": "Libra",
+    "ImageUrl": "images/h7.svg",
+    "Dates": "September 23 - October 22",
+    "Element": "Air",
+    "Traits": [
+      {
+        "Name": "Diplomatic",
+        "Percentage": 75
+      },
+      {
+        "Name": "Harmonious",
+        "Percentage": 80
+      },
+      {
+        "Name": "Idealistic",
+        "Percentage": 70
+      },
+      {
+        "Name": "Indecisive",
+        "Percentage": 65
+      },
+      {
+        "Name": "Charming",
+        "Percentage": 85
+      }
+    ]
+  },
+  {
+    "Name": "Scorpio",
+    "ImageUrl": "images/h8.svg",
+    "Dates": "October 23 - November 21",
+    "Element": "Water",
+    "Traits": [
+      {
+        "Name": "Passionate",
+        "Percentage": 85
+      },
+      {
+        "Name": "Magnetic",
+        "Percentage": 80
+      },
+      {
+        "Name": "Resolute",
+        "Percentage": 75
+      },
+      {
+        "Name": "Jealous",
+        "Percentage": 70
+      },
+      {
+        "Name": "Secretive",
+        "Percentage": 60
+      }
+    ]
+  },
+  {
+    "Name": "Sagittarius",
+    "ImageUrl": "images/h9.svg",
+    "Dates": "November 22 - December 21",
+    "Element": "Fire",
+    "Traits": [
+      {
+        "Name": "Adventurous",
+        "Percentage": 90
+      },
+      {
+        "Name": "Optimistic",
+        "Percentage": 85
+      },
+      {
+        "Name": "Straightforward",
+        "Percentage": 80
+      },
+      {
+        "Name": "Impatient",
+        "Percentage": 70
+      },
+      {
+        "Name": "Versatile",
+        "Percentage": 75
+      }
+    ]
+  },
+  {
+    "Name": "Capricorn",
+    "ImageUrl": "images/h10.svg",
+    "Dates": "December 22 - January 19",
+    "Element": "Earth",
+    "Traits": [
+      {
+        "Name": "Ambitious",
+        "Percentage": 80
+      },
+      {
+        "Name": "Disciplined",
+        "Percentage": 85
+      },
+      {
+        "Name": "Prudent",
+        "Percentage": 75
+      },
+      {
+        "Name": "Pessimistic",
+        "Percentage": 60
+      },
+      {
+        "Name": "Determined",
+        "Percentage": 70
+      }
+    ]
+  },
+  {
+    "Name": "Aquarius",
+    "ImageUrl": "images/h11.svg",
+    "Dates": "January 20 - February 18",
+    "Element": "Air",
+    "Traits": [
+      {
+        "Name": "Independent",
+        "Percentage": 80
+      },
+      {
+        "Name": "Intellectual",
+        "Percentage": 85
+      },
+      {
+        "Name": "Unconventional",
+        "Percentage": 75
+      },
+      {
+        "Name": "Stubborn",
+        "Percentage": 70
+      },
+      {
+        "Name": "Humanitarian",
+        "Percentage": 90
+      }
+    ]
+  },
+  {
+    "Name": "Pisces",
+    "ImageUrl": "images/h12.svg",
+    "Dates": "February 19 - March 20",
+    "Element": "Water",
+    "Traits": [
+      {
+        "Name": "Compassionate",
+        "Percentage": 85
+      },
+      {
+        "Name": "Intuitive",
+        "Percentage": 80
+      },
+      {
+        "Name": "Artistic",
+        "Percentage": 75
+      },
+      {
+        "Name": "Escapist",
+        "Percentage": 60
+      },
+      {
+        "Name": "Sensitive",
+        "Percentage": 70
+      }
+    ]
+  }
+]
