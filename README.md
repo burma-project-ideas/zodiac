@@ -90,6 +90,5 @@ try {
     </tbody>
 </table>
 
-![Alt text](https://github.com/sannlynnhtun-coding/Zodiac/141624237/95da38bd-23b6-4725-b750-71ee4458947b)
+![ZodiacFlow](https://github.com/sannlynnhtun-coding/Zodiac/assets/141624237/93184eeb-9c36-4ff9-98ba-fbcabcbf2b8e)
 
-![Alt text](https://github.com/sannlynnhtun-coding/Zodiac/141624237/b537d2f2-d390-4cf9-a031-75c71194cadc)
