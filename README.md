@@ -89,8 +89,7 @@ try {
         </tr>
     </tbody>
 </table>
-<p align="center">
-    <img width="200" src="https://github.com/sannlynnhtun-coding/Zodiac/assets/141624237/93184eeb-9c36-4ff9-98ba-fbcabcbf2b8e">
-</p>
+
+![ZodiacFlow](https://github.com/sannlynnhtun-coding/Zodiac/assets/141624237/413dd183-f799-42bd-bc97-17a22bfd1700)
 
 ![ZodiacFlow1](https://github.com/sannlynnhtun-coding/Zodiac/assets/141624237/52fc389f-4740-40c5-94e4-c9e2488c646c)
