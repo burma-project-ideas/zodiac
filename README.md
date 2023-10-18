@@ -89,5 +89,7 @@ try {
         </tr>
     </tbody>
 </table>
-![Alt text](https://github.com/sannlynnhtun-coding/Zodiac/assets/141624237/9f4256dd-941c-44c9-b5ca-71face8cbbf6)
-![Alt text](https://github.com/sannlynnhtun-coding/Zodiac/assets/141624237/5f53bc0c-c0ab-46fe-a3b8-d9c6ba3d4846)
+
+![ZodiacFlow](https://github.com/sannlynnhtun-coding/Zodiac/141624237/95da38bd-23b6-4725-b750-71ee4458947b)
+
+![ZodiacFlow1](https://github.com/sannlynnhtun-coding/Zodiac/141624237/b537d2f2-d390-4cf9-a031-75c71194cadc)
