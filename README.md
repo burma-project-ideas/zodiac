@@ -89,3 +89,5 @@ try {
         </tr>
     </tbody>
 </table>
+![zzz](https://github.com/sannlynnhtun-coding/Zodiac/assets/141624237/9f4256dd-941c-44c9-b5ca-71face8cbbf6)
+![zzz2](https://github.com/sannlynnhtun-coding/Zodiac/assets/141624237/5f53bc0c-c0ab-46fe-a3b8-d9c6ba3d4846)
