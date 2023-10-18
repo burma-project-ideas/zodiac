@@ -90,6 +90,5 @@ try {
     </tbody>
 </table>
 
-![ZodiacFlow](https://github.com/sannlynnhtun-coding/Zodiac/assets/141624237/413dd183-f799-42bd-bc97-17a22bfd1700)
-
-![ZodiacFlow1](https://github.com/sannlynnhtun-coding/Zodiac/assets/141624237/52fc389f-4740-40c5-94e4-c9e2488c646c)
+![Alt text](https://github.com/sannlynnhtun-coding/Zodiac/blob/main/ZodiacFlow1.png)
+![Alt text](https://github.com/sannlynnhtun-coding/Zodiac/blob/main/ZodiacFlow2.png)
