@@ -6,7 +6,7 @@
 ပုံများ အား [mindmaestro.co.uk](https://www.mindmaestro.co.uk/zodiac-art) မှယူသုံးထားပါသည်။
 
 1. ကိုယ်သိချင်သောမွေးနေ့အားရွေးချယ်ပြီး တွက်ချက်ရန် Logic အား Javascript Codeတွင် ကြည့်ရှုနိုင်ပါသည်။
-2. ၎င်းကထွက်လာသော Zodiac Signနှင့်သက်ဆိုင်သောသော Data များအား Zodiac Sign Detail တွင် ချိတ်ဆက်၍ပြသနိုင်ပါသည်။ Dataများကို [Zodiac.json](https://github.com/sannlynnhtun-coding/Zodiac/blob/main/Zodiac.json) တွင်ရရှိနိုင်ပါသည်။ ပုံများလည်းထည့်သွင်းပေးထားပါသည်။
+2. ၎င်းကထွက်လာသော Zodiac Signနှင့်သက်ဆိုင်သောသော Data များအား Zodiac Sign Detail တွင် ချိတ်ဆက်၍ပြသနိုင်ပါသည်။ Data များကို [Zodiac.json](https://github.com/sannlynnhtun-coding/Zodiac/blob/main/Zodiac.json) တွင်ရရှိနိုင်ပါသည်။ ပုံများလည်း ထည့်သွင်းပေးထားပါသည်။
 
 ![Alt text](https://github.com/sannlynnhtun-coding/Zodiac/blob/main/ZodiacFlow1.png)
 
