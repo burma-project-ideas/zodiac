@@ -9,8 +9,8 @@
 
 ![Alt text](https://github.com/sannlynnhtun-coding/Zodiac/blob/main/ZodiacFlow1.png)
 
-- ၎င်းကထွက်လာသော Zodiac Signနှင့်သက်ဆိုင်သောသော Data များအား Zodiac Sign Detailတွင် ချိတ်ဆက်၍ပြသနိုင်ပါသည်။Dataများကို[Zodiac.json](https://github.com/sannlynnhtun-coding/Zodiac/blob/main/Zodiac.json)တွင်ရရှိနိုင်ပါသည်။ပုံ   များလည်းထည့်သွင်းပေးထားပါသည်။
-- 
+- ၎င်းကထွက်လာသော Zodiac Signနှင့်သက်ဆိုင်သောသော Data များအား Zodiac Sign Detailတွင် ချိတ်ဆက်၍ပြသနိုင်ပါသည်။Dataများကို[Zodiac.json](https://github.com/sannlynnhtun-coding/Zodiac/blob/main/Zodiac.json)တွင်ရရှိနိုင်ပါသည်။ပုံများလည်းထည့်သွင်းပေးထားပါသည်။
+
 ![Alt text](https://github.com/sannlynnhtun-coding/Zodiac/blob/main/ZodiacFlow2.png)
 
 <table>
