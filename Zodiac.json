@@ -1,57 +1,8 @@
 {
-	"ZodiacSigns": [
-		{
-			"Id": 1,
-			"Name": "Aries"
-		},
-		{
-			"Id": 2,
-			"Name": "Taurus"
-		},
-		{
-			"Id": 3,
-			"Name": "Gemini"
-		},
-		{
-			"Id": 4,
-			"Name": "Cancer"
-		},
-		{
-			"Id": 5,
-			"Name": "Leo"
-		},
-		{
-			"Id": 6,
-			"Name": "Virgo"
-		},
-		{
-			"Id": 7,
-			"Name": "Libra"
-		},
-		{
-			"Id": 8,
-			"Name": "Scorpio"
-		},
-		{
-			"Id": 9,
-			"Name": "Sagittarius"
-		},
-		{
-			"Id": 10,
-			"Name": "Capricorn"
-		},
-		{
-			"Id": 11,
-			"Name": "Aquarius"
-		},
-		{
-			"Id": 12,
-			"Name": "Pisces"
-		}
-	],
 	"ZodiacSignsDetail": [
 		{
 			"Id": 1,
+			"Name": "Aries"
 			"ZodiacSignImageUrl": "images/zodiac-signs/h1.svg",
 			"ZodiacSign2ImageUrl": "images/zodiac-signs-2/aries.jpg",
 			"Dates": "March 21 - April 19",
@@ -82,6 +33,7 @@
 		},
 		{
 			"Id": 2,
+			"Name": "Taurus"
 			"ZodiacSignImageUrl": "images/zodiac-signs/h2.svg",
 			"ZodiacSign2ImageUrl": "images/zodiac-signs-2/taurus.jpg",
 			"Dates": "April 20 - May 20",
@@ -112,6 +64,7 @@
 		},
 		{
 			"Id": 3,
+			"Name": "Gemini"
 			"ZodiacSignImageUrl": "images/zodiac-signs/h3.svg",
 			"ZodiacSign2ImageUrl": "images/zodiac-signs-2/gemini.jpg",
 			"Dates": "May 21 - June 20",
@@ -142,6 +95,7 @@
 		},
 		{
 			"Id": 4,
+			"Name": "Cancer"
 			"ZodiacSignImageUrl": "images/zodiac-signs/h4.svg",
 			"ZodiacSign2ImageUrl": "images/zodiac-signs-2/cancer.jpg",
 			"Dates": "June 21 - July 22",
@@ -172,6 +126,7 @@
 		},
 		{
 			"Id": 5,
+			"Name": "Leo"
 			"ZodiacSignImageUrl": "images/zodiac-signs/h5.svg",
 			"ZodiacSign2ImageUrl": "images/zodiac-signs-2/leo.jpg",
 			"Dates": "July 23 - August 22",
@@ -202,6 +157,7 @@
 		},
 		{
 			"Id": 6,
+			"Name": "Virgo"
 			"ZodiacSignImageUrl": "images/zodiac-signs/h6.svg",
 			"ZodiacSign2ImageUrl": "images/zodiac-signs-2/virgo.jpg",
 			"Dates": "August 23 - September 22",
@@ -232,6 +188,7 @@
 		},
 		{
 			"Id": 7,
+			"Name": "Libra"
 			"ZodiacSignImageUrl": "images/zodiac-signs/h7.svg",
 			"ZodiacSign2ImageUrl": "images/zodiac-signs-2/libra.jpg",
 			"Dates": "September 23 - October 22",
@@ -262,6 +219,7 @@
 		},
 		{
 			"Id": 8,
+			"Name": "Scorpio"
 			"ZodiacSignImageUrl": "images/zodiac-signs/h8.svg",
 			"ZodiacSign2ImageUrl": "images/zodiac-signs-2/scorpio.jpg",
 			"Dates": "October 23 - November 21",
@@ -292,6 +250,7 @@
 		},
 		{
 			"Id": 9,
+			"Name": "Sagittarius"
 			"ZodiacSignImageUrl": "images/zodiac-signs/h9.svg",
 			"ZodiacSign2ImageUrl": "images/zodiac-signs-2/sagittarius.jpg",
 			"Dates": "November 22 - December 21",
@@ -322,6 +281,7 @@
 		},
 		{
 			"Id": 10,
+			"Name": "Capricorn"
 			"ZodiacSignImageUrl": "images/zodiac-signs/h10.svg",
 			"ZodiacSign2ImageUrl": "images/zodiac-signs-2/capricorn.jpg",
 			"Dates": "December 22 - January 19",
@@ -352,6 +312,7 @@
 		},
 		{
 			"Id": 11,
+			"Name": "Aquarius"
 			"ZodiacSignImageUrl": "images/zodiac-signs/h11.svg",
 			"ZodiacSign2ImageUrl": "images/zodiac-signs-2/aquarius.jpg",
 			"Dates": "January 20 - February 18",
@@ -382,6 +343,7 @@
 		},
 		{
 			"Id": 12,
+			"Name": "Pisces"
 			"ZodiacSignImageUrl": "images/zodiac-signs/h12.svg",
 			"ZodiacSign2ImageUrl": "images/zodiac-signs-2/pisces.jpg",
 			"Dates": "February 19 - March 20",
