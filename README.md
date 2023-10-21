@@ -46,7 +46,7 @@ Reference - https://www.knowprogram.com/js/chinese-zodiac-calculator-in-javascri
 
 ```javascript
 function getChineseZodiacSign(birthYear) {
-  const zodiacAnimals = ['Monkey🐒', 'Rooster🐓', 'Dog🐕', 'Pig🐖', 'Rat🐀', 'Ox🐂', 'Tiger🐅', 'Rabbit🐇', 'Dragon🐉', 'Snake🐍', 'Horse🐎', 'Sheep🐑'];
+  const zodiacAnimals = ['Monkey 🐒', 'Rooster 🐓', 'Dog 🐕', 'Pig 🐖', 'Rat 🐀', 'Ox 🐂', 'Tiger 🐅', 'Rabbit 🐇', 'Dragon 🐉', 'Snake 🐍', 'Horse 🐎', 'Sheep 🐑'];
 
   // Calculate the Chinese zodiac year.
   const zodiacYear = birthYear % 12;
