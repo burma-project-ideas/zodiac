@@ -34,8 +34,9 @@ Date ရွေးမယ် ရလာတာကို Zodiac Sign Logic နဲ့ 
     </tbody>
 </table>
 
-တရုတ်ရာသီခွင့်နှင့်ပတ်သတ်သော Logic ကို ဤတွင်ကြည့်ရှုနိုင်ပါသည်
-Chinese Zodiac Logic ကို ပြန် Change ပေးထားပါတယ်
+တရုတ်ရာသီခွင့်နှင့်ပတ်သတ်သော Logic ကို ဤတွင်ကြည့်ရှုနိုင်ပါသည်။
+Chinese Zodiac Logic ကို ပြန် Change ပေးထားပါတယ်။ <br />
+https://playcode.io/1636595
 ```javascript
 function getChineseZodiacSign(birthYear) {
   const zodiacAnimals = ['Monkey🐒', 'Rooster🐓', 'Dog🐕', 'Pig🐖', 'Rat🐀', 'Ox🐂', 'Tiger🐅', 'Rabbit🐇', 'Dragon🐉', 'Snake🐍', 'Horse🐎', 'Sheep🐑'];
