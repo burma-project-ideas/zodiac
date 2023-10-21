@@ -37,8 +37,13 @@ Date ရွေးမယ် ရလာတာကို Zodiac Sign Logic နဲ့ 
 
 တရုတ်ရာသီခွင့်နှင့်ပတ်သတ်သော Logic ကို ဤတွင်ကြည့်ရှုနိုင်ပါသည်။
 Chinese Zodiac Logic ကို ပြန် Change ပေးထားပါတယ်။ <br />
-[Arkar Myo Min](https://github.com/akmm-dev) မှကူညီပေးထားပါတယ် <br />
+[Arkar Myo Min](https://github.com/akmm-dev) မှကူညီပေးထားပါတယ်။ <br />
+
+အောက်က Link မှာလည်း JavaScript Code နဲ့ ရေးထားပေးတာမို့ သွားစမ်းကြည့်လို့ရပါတယ်။  <br />
 https://playcode.io/1636595
+
+Reference - https://www.knowprogram.com/js/chinese-zodiac-calculator-in-javascript/
+
 ```javascript
 function getChineseZodiacSign(birthYear) {
   const zodiacAnimals = ['Monkey🐒', 'Rooster🐓', 'Dog🐕', 'Pig🐖', 'Rat🐀', 'Ox🐂', 'Tiger🐅', 'Rabbit🐇', 'Dragon🐉', 'Snake🐍', 'Horse🐎', 'Sheep🐑'];
