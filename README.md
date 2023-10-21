@@ -36,6 +36,7 @@ Date ရွေးမယ် ရလာတာကို Zodiac Sign Logic နဲ့ 
 
 တရုတ်ရာသီခွင့်နှင့်ပတ်သတ်သော Logic ကို ဤတွင်ကြည့်ရှုနိုင်ပါသည်။
 Chinese Zodiac Logic ကို ပြန် Change ပေးထားပါတယ်။ <br />
+[Arkar Myo Min](https://github.com/akmm-dev) မှကူညီပေးထားပါတယ် <br />
 https://playcode.io/1636595
 ```javascript
 function getChineseZodiacSign(birthYear) {
