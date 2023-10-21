@@ -30,25 +30,34 @@ Date ရွေးမယ် ရလာတာကို Zodiac Sign Logic နဲ့ 
             <td><a href="https://github.com/mgchit-coding"><img src="https://github.com/mgchit-coding.png" width="60px;"/></a></td>
             <td><a href="https://github.com/myatphonekhant-developer"><img src="https://github.com/myatphonekhant-developer.png" width="60px;"/></a></td>
             <td><a href="https://github.com/MyatPhoneThant"><img src="https://github.com/MyatPhoneThant.png" width="60px;"/></a></td>
+            <td><a href="https://github.com/akmm-dev"><img src="https://github.com/akmm-dev.png" width="60px;"/></a></td>
         </tr>
     </tbody>
 </table>
 
-တရုတ်ရာသီခွင့်နှင့်ပတ်သတ်သော Logic ကို ဤတွင်ကြည့်ရှုနိုင်ပါသည်
-```javascript
-function getChineseZodiac(birthYear) {
-    const startYear = 1900; // Start year of the Chinese zodiac cycle
-    const zodiacSigns = ["Monkey", "Rooster", "Dog", "Pig", "Rat", "Ox", "Tiger", "Rabbit", "Dragon", "Snake", "Horse", "Goat"];
-    const offset = (birthYear - startYear) % 12; // Calculate the offset from the start year
+တရုတ်ရာသီခွင့်နှင့်ပတ်သတ်သော Logic ကို ဤတွင်ကြည့်ရှုနိုင်ပါသည်။
+Chinese Zodiac Logic ကို ပြန် Change ပေးထားပါတယ်။ <br />
+[Arkar Myo Min](https://github.com/akmm-dev) မှကူညီပေးထားပါတယ်။ <br />
 
-    // Determine the Chinese zodiac sign based on the offset
-    const zodiacSign = zodiacSigns[offset];
-    return zodiacSign;
+အောက်က Link မှာလည်း JavaScript Code နဲ့ ရေးထားပေးတာမို့ သွားစမ်းကြည့်လို့ရပါတယ်။  <br />
+https://playcode.io/1636595
+
+Reference - https://www.knowprogram.com/js/chinese-zodiac-calculator-in-javascript/
+
+```javascript
+function getChineseZodiacSign(birthYear) {
+  const zodiacAnimals = ['Monkey 🐒', 'Rooster 🐓', 'Dog 🐕', 'Pig 🐖', 'Rat 🐀', 'Ox 🐂', 'Tiger 🐅', 'Rabbit 🐇', 'Dragon 🐉', 'Snake 🐍', 'Horse 🐎', 'Sheep 🐑'];
+
+  // Calculate the Chinese zodiac year.
+  const zodiacYear = birthYear % 12;
+
+  // Return the Chinese zodiac animal for the calculated year.
+  return zodiacAnimals[zodiacYear];
 }
 
 // Usage example
-const birthYear = 1990; // Replace with the desired birth year
-const chineseZodiac = getChineseZodiac(birthYear);
+const birthYear = 2024; // Replace with the desired birth year
+const chineseZodiac = getChineseZodiacSign(birthYear);
 console.log(`Chinese zodiac sign: ${chineseZodiac}`);
 ```
 နက္ခတ်ရာသီခွင်နှင့်ပတ်သက်သော Logic များကိုဤတွင်ကြည့်ရှုနိုင်ပါသည်
