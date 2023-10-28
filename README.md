@@ -104,4 +104,8 @@ try {
     console.error(error.message);
 }
 ```
+- [Kaung Myat Thu (Flutter)](https://github.com/Kaung-Myat/Horoscope)
+- [Kyaw Mg Mg Thu (JavaScript)](https://github.com/KyawMgMgThu/Zodaic_Sign)
+- [William Phyo (Next.Js)](https://github.com/phyoko72/zodiac)
+- [Arkar Myo Min (JavaScript)](https://akmm-dev.github.io/Zodiac/)
 
