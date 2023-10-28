@@ -108,4 +108,5 @@ try {
 - [Kyaw Mg Mg Thu (JavaScript)](https://github.com/KyawMgMgThu/Zodaic_Sign)
 - [William Phyo (Next.Js)](https://github.com/phyoko72/zodiac)
 - [Arkar Myo Min (JavaScript)](https://akmm-dev.github.io/Zodiac/)
+- [Min Thike Tun (React.Js)](https://github.com/Minthiketun/zodiac)
 
