@@ -109,4 +109,6 @@ try {
 - [William Phyo (Next.Js)](https://github.com/phyoko72/zodiac)
 - [Arkar Myo Min (JavaScript)](https://akmm-dev.github.io/Zodiac/)
 - [Min Thike Tun (React.Js)](https://github.com/Minthiketun/zodiac)
+- [Wai Yan Min Lwin (Next.Js)](https://github.com/wyMinLwin/zodiac-next)
+- [Zin Moe Aung (TypeScript)](https://github.com/Zinmoeag/zodiac)
 
