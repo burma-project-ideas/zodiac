@@ -11,6 +11,15 @@ Date ရွေးမယ် ရလာတာကို Zodiac Sign Logic နဲ့ 
 1. ကိုယ်သိချင်သောမွေးနေ့အားရွေးချယ်ပြီး တွက်ချက်ရန် Logic အား Javascript Codeတွင် ကြည့်ရှုနိုင်ပါသည်။
 2. ၎င်းကထွက်လာသော Zodiac Signနှင့်သက်ဆိုင်သောသော Data များအား Zodiac Sign Detail တွင် ချိတ်ဆက်၍ပြသနိုင်ပါသည်။ Data များကို [Zodiac.json](https://github.com/sannlynnhtun-coding/Zodiac/blob/main/Zodiac.json) တွင်ရရှိနိုင်ပါသည်။ ပုံများလည်း ထည့်သွင်းပေးထားပါသည်။
 
+### Participants
+1. [Kaung Myat Thu (Flutter)](https://github.com/Kaung-Myat/Horoscope)
+2. [Kyaw Mg Mg Thu (JavaScript)](https://github.com/KyawMgMgThu/Zodaic_Sign)
+3. [William Phyo (Next.Js)](https://github.com/phyoko72/zodiac)
+4. [Arkar Myo Min (JavaScript)](https://akmm-dev.github.io/Zodiac/)
+5. [Min Thike Tun (React.Js)](https://github.com/Minthiketun/zodiac)
+6. [Wai Yan Min Lwin (Next.Js)](https://github.com/wyMinLwin/zodiac-next)
+7. [Zin Moe Aung (TypeScript)](https://github.com/Zinmoeag/zodiac)
+
 ![Alt text](https://github.com/sannlynnhtun-coding/Zodiac/blob/main/ZodiacFlow1.png)
 
 ![Alt text](https://github.com/sannlynnhtun-coding/Zodiac/blob/main/ZodiacFlow2.png)
@@ -104,11 +113,4 @@ try {
     console.error(error.message);
 }
 ```
-- [Kaung Myat Thu (Flutter)](https://github.com/Kaung-Myat/Horoscope)
-- [Kyaw Mg Mg Thu (JavaScript)](https://github.com/KyawMgMgThu/Zodaic_Sign)
-- [William Phyo (Next.Js)](https://github.com/phyoko72/zodiac)
-- [Arkar Myo Min (JavaScript)](https://akmm-dev.github.io/Zodiac/)
-- [Min Thike Tun (React.Js)](https://github.com/Minthiketun/zodiac)
-- [Wai Yan Min Lwin (Next.Js)](https://github.com/wyMinLwin/zodiac-next)
-- [Zin Moe Aung (TypeScript)](https://github.com/Zinmoeag/zodiac)
 
