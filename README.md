@@ -19,6 +19,7 @@ Date ရွေးမယ် ရလာတာကို Zodiac Sign Logic နဲ့ 
 5. [Min Thike Tun (React.Js)](https://github.com/Minthiketun/zodiac)
 6. [Wai Yan Min Lwin (Next.Js)](https://github.com/wyMinLwin/zodiac-next)
 7. [Zin Moe Aung (TypeScript)](https://github.com/Zinmoeag/zodiac)
+8. [Htar Htar Ei (React + Vite)](https://github.com/htarhtarei670/Zodiac-Web-app)
 
 ![Alt text](https://github.com/sannlynnhtun-coding/Zodiac/blob/main/ZodiacFlow1.png)
 
