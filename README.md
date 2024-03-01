@@ -36,7 +36,7 @@ Date ရွေးမယ် ရလာတာကို Zodiac Sign Logic နဲ့ 
             <td><a href="https://github.com/sannlynnhtun-coding"><img src="https://github.com/sannlynnhtun-coding.png" width="60px;"/></a></td>
             <td><a href="https://github.com/OatSoeKhant-Coding"><img src="https://github.com/OatSoeKhant-Coding.png" width="60px;"/></a></td>
             <td><a href="https://github.com/Rasunon-Soare"><img src="https://github.com/Rasunon-Soare.png" width="60px;"/></a></td>
-            <td><a href="https://github.com/dabria2004"><img src="https://github.com/dabria2004.png" width="60px;"/></a></td>
+            <td><a href="https://github.com/phyuphyuthin-coding"><img src="https://github.com/phyuphyuthin-coding.png" width="60px;"/></a></td>
             <td><a href="https://github.com/mgchit-coding"><img src="https://github.com/mgchit-coding.png" width="60px;"/></a></td>
             <td><a href="https://github.com/myatphonekhant-developer"><img src="https://github.com/myatphonekhant-developer.png" width="60px;"/></a></td>
             <td><a href="https://github.com/myatphonethant-dev"><img src="https://github.com/myatphonethant-dev.png" width="60px;"/></a></td>
