@@ -34,8 +34,8 @@ Date ရွေးမယ် ရလာတာကို Zodiac Sign Logic နဲ့ 
     <tbody>
         <tr>
             <td><a href="https://github.com/sannlynnhtun-coding"><img src="https://github.com/sannlynnhtun-coding.png" width="60px;"/></a></td>
-            <td><a href="https://github.com/OatSoeK"><img src="https://github.com/OatSoeKhant-Coding.png" width="60px;"/></a></td>
-            <td><a href="https://github.com/naykhantkyaw-coding"><img src="https://github.com/Rasunon-Soare.png" width="60px;"/></a></td>
+            <td><a href="https://github.com/OatSoeK"><img src="https://github.com/OatSoeK.png" width="60px;"/></a></td>
+            <td><a href="https://github.com/naykhantkyaw-coding"><img src="https://github.com/naykhantkyaw-coding.png" width="60px;"/></a></td>
             <td><a href="https://github.com/phyuphyuthin-coding"><img src="https://github.com/phyuphyuthin-coding.png" width="60px;"/></a></td>
             <td><a href="https://github.com/mgchit-coding"><img src="https://github.com/mgchit-coding.png" width="60px;"/></a></td>
             <td><a href="https://github.com/myatphonekhant-developer"><img src="https://github.com/myatphonekhant-developer.png" width="60px;"/></a></td>
