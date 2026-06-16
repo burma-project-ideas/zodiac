@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Zodiac.Console/Zodiac.Console.csproj" />
+    <Project Path="src/Zodiac.Core/Zodiac.Core.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Zodiac.Tests/Zodiac.Tests.csproj" />
+  </Folder>
+</Solution>
