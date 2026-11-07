@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="8.97" height="5.125" viewBox="0 0 8.97 5.125">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #797979;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="Up_Arrow" data-name="Up Arrow" class="cls-1" d="M1155.85,867a0.362,0.362,0,0,1-.53,0l-3.84-4.053L1147.64,867a0.362,0.362,0,0,1-.53,0,0.4,0.4,0,0,1,0-.557l4.1-4.332a0.383,0.383,0,0,1,.27-0.115,0.361,0.361,0,0,1,.26.115l4.11,4.332A0.422,0.422,0,0,1,1155.85,867Z" transform="translate(-1147 -862)"/>
+</svg>

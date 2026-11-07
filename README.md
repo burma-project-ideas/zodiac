@@ -1,3 +1,43 @@
+# Zodiac — Blazor WebAssembly
+
+The deployed application is the Blazor WebAssembly app from [sannlynnhtun-coding/BlazorWasm.Zodiac](https://github.com/sannlynnhtun-coding/BlazorWasm.Zodiac), merged into [burma-project-ideas/zodiac](https://github.com/burma-project-ideas/zodiac) with its Git history preserved. `BlazorWasm.Zodiac/` is the application source of truth. The earlier temporary JavaScript landing page is no longer the deployment source.
+
+Live website: [Zodiac on Vercel](https://zodiac-omega-ruddy.vercel.app/).
+
+Choose a birthday to view the Western zodiac sign, Myanmar month, personality chart, descriptions, element, and representative flower. The app runs in the browser without a backend or database.
+
+## Data and credits
+
+Zodiac descriptions, traits, Myanmar text, and the original image dataset come from **Burma Project Ideas — Zodiac**. The original dataset remains at [`Zodiac.json`](Zodiac.json); the Blazor app uses its existing embedded dataset in [`BlazorWasm.Zodiac/Data/JsonData.cs`](BlazorWasm.Zodiac/Data/JsonData.cs). These are separate copies: changes to the root JSON do not automatically update the app.
+
+- Application: [BlazorWasm.Zodiac by Sann Lynn Htun](https://github.com/sannlynnhtun-coding/BlazorWasm.Zodiac).
+- Data and community project: [Burma Project Ideas — Zodiac](https://github.com/burma-project-ideas/zodiac).
+- UI resource credited by the source app: [Astrology HTML template](https://kamleshyadav.com/html/astrology/version-3/index.html).
+- Zodiac artwork credited by the original dataset: [Mind Maestro](https://www.mindmaestro.co.uk/zodiac-art).
+
+Existing JavaScript examples, `src/` calculation projects, tests, and the original project notes below remain available as reference material; Vercel publishes the Blazor app.
+
+## Run and check locally
+
+```powershell
+dotnet run --project BlazorWasm.Zodiac/BlazorWasm.Zodiac.csproj
+dotnet publish BlazorWasm.Zodiac/BlazorWasm.Zodiac.csproj -c Release -o artifacts/publish
+node zodiac.test.js
+dotnet test tests/Zodiac.Tests/Zodiac.Tests.csproj
+```
+
+The source app currently targets .NET 6, which is out of support. Its framework and dependency versions are preserved from the source repository; upgrading them is separate maintenance work. Publishing has been checked with the installed .NET SDK. The reference test project targets .NET 10.
+
+## Vercel deployment
+
+Use the repository root as the Vercel Root Directory with Framework Preset **Other**. [`vercel.json`](vercel.json) runs [`scripts/vercel-build.sh`](scripts/vercel-build.sh), which installs a .NET 10 SDK when one is unavailable and publishes the source app. Vercel serves only `artifacts/publish/wwwroot`; filesystem routes serve assets before the Blazor fallback to `index.html`.
+
+To publish locally built files, upload the contents of `artifacts/publish/wwwroot` to the existing Vercel project **zodiac**. Do not upload the repository root as static content. For automatic deployments, connect this repository to that existing project under Settings → Git and select `main` as the production branch. A manual folder upload alone does not enable automatic deployment.
+
+The UI uses ApexCharts from cdnjs and its bundled date picker, styles, and artwork. An internet connection is needed on the first visit. The app includes the source project's PWA service worker.
+
+## Original Burma Project Ideas project notes
+
 # Zodiac
 
 
@@ -83,4 +123,3 @@ try {
     console.error(error.message);
 }
 ```
-

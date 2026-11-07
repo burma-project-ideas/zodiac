@@ -1,0 +1,82 @@
+﻿@page "/"
+
+<PageTitle>Zodiac</PageTitle>
+@if (_isLoading)
+{
+    <div class="as_loader">
+        <img src="assets/images/loader.png" alt="" class="img-responsive" />
+    </div>
+}
+else
+{
+    @* <PageMain /> *@
+    <PageSearch />
+    @* <PageHoroscopeSigns /> *@
+}
+
+<!-- Modal -->
+<div id="as_login" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Login</h4>
+            </div>
+            <div class="modal-body">
+                <div class="as_login_box active">
+                    <form action="">
+                        <div class="form-group">
+                            <input type="text" name="" placeholder="Enter email" class="form-control" id="">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="" placeholder="Enter password here" class="form-control" id="">
+                        </div>
+                        <div class="form-group">
+                            <div class="as_login_data">
+                                <label>
+                                    Remember me
+                                    <input type="checkbox" name="as_remember_me" value="">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <a href="#">Forgot password ?</a>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <a href="javascript:;" class="as_btn">login</a>
+                        </div>
+                    </form>
+                    <p class="text-center as_margin0 as_padderTop20">Create An Account ? <a href="javascript:;" class="as_orange as_signup">SignUp</a></p>
+                </div>
+                <div class="as_signup_box">
+                    <form action="">
+                        <div class="form-group">
+                            <input type="text" name="" placeholder="Enter name" class="form-control" id="">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="" placeholder="Enter email" class="form-control" id="">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="" placeholder="Enter password here" class="form-control" id="">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="" placeholder="Enter mobile number" class="form-control" id="">
+                        </div>
+                        <div class="form-group">
+                            <select name="" class="form-control" id="">
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                            </select>
+                        </div>
+                        <div class="text-center">
+                            <a href="javascript:;" class="as_btn">Sign Up</a>
+                        </div>
+                    </form>
+                    <p class="text-center as_margin0 as_padderTop20">Have An Account ? <a href="javascript:;" class="as_orange as_login">Login</a></p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
