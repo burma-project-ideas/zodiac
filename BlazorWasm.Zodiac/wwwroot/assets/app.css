@@ -126,16 +126,26 @@ section[id] {
   letter-spacing: -0.7px;
 }
 .brand-mark {
-  display: inline-grid;
-  place-items: center;
-  width: 34px;
+  display: inline-block;
+  width: 36px;
   height: 36px;
-  border: 1px solid #e9d7fe;
-  border-radius: 9px;
-  background: linear-gradient(#f9f5ff, #e9d7fe);
-  color: #6941c6;
-  font-size: 29px;
-  box-shadow: 0 2px 3px #10182812;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+.small-logo {
+  width: 30px;
+  height: 30px;
+}
+.loading-logo {
+  width: 72px;
+  height: 72px;
+}
+.loading-state {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
 }
 .site-header nav {
   display: flex;
@@ -853,7 +863,7 @@ section[id] {
   text-decoration: underline;
 }
 .loading-state {
-  display: grid;
+  display: flex;
   place-items: center;
   min-height: 70vh;
   color: #6941c6;
@@ -1146,4 +1156,6 @@ section[id] {
   }
 }
 
-h1:focus { outline: none; }
+h1:focus {
+  outline: none;
+}

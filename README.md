@@ -1,4 +1,4 @@
-<p align="center"><img src="BlazorWasm.Zodiac/wwwroot/logo.png" width="120" alt="Zodiac App Logo" /></p>
+<p align="center"><img src="BlazorWasm.Zodiac/wwwroot/brand/logo.svg" width="96" alt="Zodiac constellation Z logo" /></p>
 
 # Zodiac (ရာသီခွင်)
 
@@ -139,3 +139,7 @@ JavaScript Tests က ရာသီခွင်အစ/အဆုံးရက်န�
 Bug Report၊ မြန်မာစာနဲ့ Data ပြင်ဆင်ချက်၊ Documentation နဲ့ ကိုယ်ပိုင် Implementation တွေကို မျှဝေနိုင်ပါတယ်။ Calculation ကို ပြင်ရင် Boundary Date Tests တွေ ထည့်ပါ။ Data / Artwork ကို ပြင်ရင် မူရင်း Credit နဲ့ Image Path တွေကို ဆက်ထိန်းပေးပါ။
 
 App နဲ့ Microsoft Blazor Packages တွေကို .NET 10 သို့ Upgrade လုပ်ထားပါတယ်။
+
+## Logo နဲ့ App Icons
+
+Zodiac ရဲ့ Logo က Purple Color နဲ့ Z Constellation၊ Orbit နဲ့ Star ကို ပေါင်းစပ်ထားတဲ့ Original Vector Mark ဖြစ်ပါတယ်။ Transparent SVG Master၊ Dark / White Variants၊ Favicon၊ App Icons နဲ့ Social Image တွေကို Master တစ်ခုတည်းကနေ Generate လုပ်ထားပါတယ်။ [Brand Assets နဲ့ ပြန်လည် Generate လုပ်နည်း](docs/brand/README.md) ကို ကြည့်နိုင်ပါတယ်။
