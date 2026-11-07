@@ -34,7 +34,7 @@ Use the repository root as the Vercel Root Directory with Framework Preset **Oth
 
 To publish locally built files, upload the contents of `artifacts/publish/wwwroot` to the existing Vercel project **zodiac**. Do not upload the repository root as static content. The existing Vercel project is connected to `burma-project-ideas/zodiac`; pushes to `main` trigger production builds. The repository root remains the Root Directory. A manual folder upload alone does not enable automatic deployment.
 
-The UI uses ApexCharts from cdnjs and its bundled date picker, styles, and artwork. An internet connection is needed on the first visit. The app includes the source project's PWA service worker.
+The UI bundles ApexCharts 3.40.0 (including its license), the date picker, styles, and artwork. An internet connection is needed on the first visit. The app includes the source project's PWA service worker.
 
 ## Original Burma Project Ideas project notes
 
