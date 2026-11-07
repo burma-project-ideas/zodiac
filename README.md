@@ -73,7 +73,7 @@ Chinese Zodiac Logic ကို Reference အနေနဲ့ ထားပေး�
 
 ## Local မှာ Run မယ်
 
-.NET SDK လိုပါတယ်။ Deployment Script က **.NET 10 SDK** ကို သုံးပြီး မူရင်း App ရဲ့ **`net6.0`** Target ကို Publish လုပ်ပါတယ်။ JavaScript Check တွေအတွက် Node.js လိုပါတယ်။
+**.NET 10 SDK** လိုပါတယ်။ App က **`net10.0`** ကို Target လုပ်ပြီး `global.json` က Stable .NET 10 SDK ကို ရွေးပေးပါတယ်။ JavaScript Check တွေအတွက် Node.js လိုပါတယ်။
 
 ```powershell
 git clone https://github.com/burma-project-ideas/zodiac.git
@@ -82,7 +82,7 @@ dotnet restore .\BlazorWasm.Zodiac\BlazorWasm.Zodiac.csproj
 dotnet run --project .\BlazorWasm.Zodiac\BlazorWasm.Zodiac.csproj
 ```
 
-Terminal မှာ ပြထားတဲ့ URL ကို Browser နဲ့ ဖွင့်ပါ။ `dotnet run` က .NET 6 Runtime ကို တောင်းလာရင် လိုအပ်တဲ့ Runtime ကို သီးခြား Install လုပ်ဖို့ လိုပါတယ်။
+Terminal မှာ ပြထားတဲ့ URL ကို Browser နဲ့ ဖွင့်ပါ။
 
 ## Build နဲ့ Deployment
 
@@ -136,4 +136,4 @@ JavaScript Tests က ရာသီခွင်အစ/အဆုံးရက်န�
 
 Bug Report၊ မြန်မာစာနဲ့ Data ပြင်ဆင်ချက်၊ Documentation နဲ့ ကိုယ်ပိုင် Implementation တွေကို မျှဝေနိုင်ပါတယ်။ Calculation ကို ပြင်ရင် Boundary Date Tests တွေ ထည့်ပါ။ Data / Artwork ကို ပြင်ရင် မူရင်း Credit နဲ့ Image Path တွေကို ဆက်ထိန်းပေးပါ။
 
-**လက်ရှိကန့်သတ်ချက်:** မူရင်း Blazor App က Support ပြီးဆုံးထားတဲ့ .NET 6 ကို Target လုပ်ထားပါတယ်။ Framework နဲ့ Dependencies Upgrade က သီးခြား Maintenance အလုပ်ဖြစ်ပါတယ်။
+App နဲ့ Microsoft Blazor Packages တွေကို .NET 10 သို့ Upgrade လုပ်ထားပါတယ်။
