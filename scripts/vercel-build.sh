@@ -6,4 +6,4 @@ if ! command -v dotnet >/dev/null 2>&1; then
   export DOTNET_ROOT=/tmp/zodiac-dotnet
   export PATH="$DOTNET_ROOT:$PATH"
 fi
-dotnet publish BlazorWasm.Zodiac/BlazorWasm.Zodiac.csproj -c Release -o artifacts/publish
+dotnet publish BlazorWasm.Zodiac/BlazorWasm.Zodiac.csproj -c Release -o artifacts/publish -p:WasmBuildNative=false
