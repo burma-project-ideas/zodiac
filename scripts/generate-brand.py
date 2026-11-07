@@ -1,6 +1,7 @@
 """Generate Zodiac branding from wwwroot/brand/logo.svg. Requires Pillow."""
 from pathlib import Path
 import xml.etree.ElementTree as ET
+import shutil
 from PIL import Image, ImageDraw, ImageFont
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -59,6 +60,10 @@ tile(512).save(BRAND / "icon-maskable-512.png")
 mark(48).save(WEB / "favicon.ico", sizes=[(16,16), (32,32), (48,48)])
 # Keep the SVG favicon on a purple tile so it stays legible in either browser theme.
 (BRAND / "favicon.svg").write_text(svg.replace('<title>', '<rect width="64" height="64" rx="14" fill="#7f56d9"/><title>').replace('color="#7f56d9"', 'color="#ffffff"'), encoding="utf-8")
+
+# Dedicated branded URLs avoid reusing browser-cached template icon paths.
+for source, target in (("favicon.ico", "favicon.ico"), ("icon-192.png", "app-icon-192.png"), ("icon-512.png", "app-icon-512.png"), ("apple-touch-icon.png", "apple-touch-icon.png")):
+    shutil.copyfile(WEB / source, BRAND / target)
 
 font_root = Path("C:/Windows/Fonts")
 def font(size, bold=False):
