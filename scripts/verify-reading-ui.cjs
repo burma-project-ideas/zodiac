@@ -23,3 +23,25 @@ assert.equal(scrolled.behavior, 'instant');
 window.focusBirthday();
 assert.equal(focused, 1);
 console.log('Chart updates, reduced motion, reading scroll and date focus passed.');
+
+const pickerCalls = [];
+let pickerOptions, birthdayValue = ' 1992-02-29 ';
+const picker = {
+    datepicker(option) { if (typeof option === 'object') pickerOptions = option; else pickerCalls.push(option); return this; },
+    attr() { return this; }, on() { return this; }, off() { return this; },
+    val(value) { if (value === undefined) return birthdayValue; birthdayValue = value; return this; }
+};
+window.jQuery = () => picker;
+window.initBirthdayPicker();
+assert.equal(pickerOptions.format, 'yyyy-mm-dd');
+assert.equal(pickerOptions.autoPick, false);
+assert.equal(pickerOptions.autoHide, true);
+assert.equal(pickerOptions.itemTag, 'button');
+assert.ok(pickerOptions.template.includes('role="dialog"'));
+for (const view of ['years picker','months picker','days picker','week','days']) assert.ok(pickerOptions.template.includes(`data-view="${view}"`));
+assert.equal(window.readBirthday(), '1992-02-29');
+window.resetBirthdayPicker();
+assert.equal(birthdayValue, '');
+window.destroyBirthdayPicker();
+assert.deepEqual(pickerCalls, ['hide','reset','destroy']);
+console.log('Birthday picker configuration, typed date, reset and cleanup passed.');

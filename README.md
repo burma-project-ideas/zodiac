@@ -21,14 +21,14 @@
 
 ## အသုံးပြုပုံ
 
-1. **Your reading** မှာ မွေးနေ့ကို Browser ရဲ့ Date Picker နဲ့ ရွေးပါ။ ရက်စွဲဖော်ပြပုံက Browser Language အလိုက် ဖြစ်ပါတယ်။
+1. **Your reading** မှာ မွေးနေ့ကို Fengyuan Chen ရဲ့ Datepicker နဲ့ ရွေးပါ။ ရက်စွဲပုံစံက `YYYY-MM-DD` ဖြစ်ပြီး ကိုယ်တိုင်ရိုက်ထည့်နိုင်ပါတယ်။
 2. **Find my sign** ကို နှိပ်ပြီး သက်ဆိုင်ရာ ရာသီခွင်ကို ကြည့်ပါ။ ဥပမာ `15-08-1990` ဆိုရင် **Leo** ဖြစ်ပါတယ်။
 3. ရာသီခွင်ရဲ့ မြန်မာလ၊ Sign ပုံ၊ Personality Traits Chart၊ Element၊ Life Purpose၊ Loyal၊ Angry၊ Character၊ Pretty Features နဲ့ Representative Flower အကြောင်းတွေကို ဖတ်နိုင်ပါတယ်။
 4. **Start a new reading** နဲ့ မွေးနေ့ကို ပြန်ရွေးနိုင်ပါတယ်။ **Zodiac signs** ထဲက ရာသီခွင်ကိုလည်း တိုက်ရိုက်ရွေးနိုင်ပါတယ်။
 
 ## App ရဲ့ Workflow
 
-`Program.cs` က Blazor App နဲ့ `ZodiacService` ကို Register လုပ်ပါတယ်။ `PageHome` က `PageSearch` ကို ပြသပြီး Native Date Input က မွေးနေ့ကို လက်ခံပါတယ်။
+`Program.cs` က Blazor App နဲ့ `ZodiacService` ကို Register လုပ်ပါတယ်။ `PageHome` က `PageSearch` ကို ပြသပြီး JavaScript Interop နဲ့ Fengyuan Chen Datepicker က မွေးနေ့ကို လက်ခံပါတယ်။
 
 **Find my sign** နှိပ်တဲ့အခါ `PageSearch.razor.cs` က ရက်စွဲကို ဖတ်ပြီး `ZodiacService.GetHoroscope()` နဲ့ လ၊ ရက်အလိုက် Western Zodiac Sign ကို တွက်ပါတယ်။ ရလာတဲ့ Sign နာမည်နဲ့ `JsonData.FindZodiacSign()` က သက်ဆိုင်ရာ Data ကို ရှာပြီး UI မှာ ပြပါတယ်။ Traits တွေကို Bundled ApexCharts Library နဲ့ Radar Chart အဖြစ် ဆွဲပါတယ်။
 
@@ -97,7 +97,7 @@ GitHub Repository က Vercel Project **zodiac** နဲ့ ချိတ်ဆက�
 
 Vercel ရဲ့ Root Directory ကို Repository Root၊ Framework Preset ကို **Other** ထားပါတယ်။ [`vercel.json`](vercel.json) က [`scripts/vercel-build.sh`](scripts/vercel-build.sh) ကို Run ပြီး SDK မရှိရင် Install လုပ်ကာ Blazor App ကို Publish လုပ်ပါတယ်။ Environment Variables နဲ့ Server Database မလိုပါဘူး။
 
-App မှာ ApexCharts **3.40.0** နဲ့ License ကို Bundle လုပ်ထားတဲ့အတွက် Chart ပြဖို့ ပြင်ပ CDN မလိုပါဘူး။ Inter Font၊ Styles နဲ့ Artwork တွေကိုလည်း App နဲ့အတူ Serve လုပ်ပါတယ်။ Date Picker က Browser ရဲ့ Native Control ဖြစ်ပါတယ်။ မူရင်း PWA Service Worker ပါဝင်ပြီး ပထမဆုံးဖွင့်တဲ့အခါ Internet Connection လိုပါတယ်။
+App မှာ ApexCharts **3.40.0** နဲ့ License ကို Bundle လုပ်ထားတဲ့အတွက် Chart ပြဖို့ ပြင်ပ CDN မလိုပါဘူး။ Inter Font၊ Styles နဲ့ Artwork တွေကိုလည်း App နဲ့အတူ Serve လုပ်ပါတယ်။ Date Picker က [Fengyuan Chen Datepicker 1.0.10](https://fengyuanchen.github.io/datepicker/) ဖြစ်ပြီး jQuery 3.6.0 နဲ့အတူ Bundle လုပ်ထားပါတယ်။ Popup ကို App ရဲ့ Purple Theme နဲ့ Style လုပ်ထားပြီး MIT License တွေကို သက်ဆိုင်ရာ Library Folder တွေမှာ ထည့်ထားပါတယ်။ မူရင်း PWA Service Worker ပါဝင်ပြီး ပထမဆုံးဖွင့်တဲ့အခါ Internet Connection လိုပါတယ်။
 
 ## စစ်ဆေးမယ်
 

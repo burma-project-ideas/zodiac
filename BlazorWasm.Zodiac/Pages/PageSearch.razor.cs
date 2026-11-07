@@ -1,12 +1,12 @@
+using System.Globalization;
 using BlazorWasm.Zodiac.Data;
 using BlazorWasm.Zodiac.Models;
 using Microsoft.JSInterop;
 
 namespace BlazorWasm.Zodiac.Pages;
 
-public partial class PageSearch
+public partial class PageSearch : IAsyncDisposable
 {
-    private DateTime? _birthDate;
     private bool _isSearch;
     private bool _renderChart = true;
     private string _error = "";
@@ -14,6 +14,7 @@ public partial class PageSearch
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
+        if (firstRender) await _JsRuntime.InvokeVoidAsync("initBirthdayPicker");
         if (!_renderChart) return;
         _renderChart = false;
         var traits = _zodiacSign.Traits.Select(trait => new ChartModel { data = trait.Percentage, label = trait.Name }).ToList();
@@ -22,12 +23,13 @@ public partial class PageSearch
 
     private async Task SearchDate()
     {
-        if (!_birthDate.HasValue)
+        var birthday = await _JsRuntime.InvokeAsync<string>("readBirthday");
+        if (!DateTime.TryParseExact(birthday, "yyyy-MM-dd", CultureInfo.InvariantCulture, DateTimeStyles.None, out var birthDate))
         {
-            _error = "Choose your birthday to find your sign.";
+            _error = "Enter a valid birthday in YYYY-MM-DD format.";
             return;
         }
-        await Sign(_ZodiacService.GetHoroscope(_birthDate.Value).ToString());
+        await Sign(_ZodiacService.GetHoroscope(birthDate).ToString());
     }
 
     private async Task Sign(string name)
@@ -47,9 +49,13 @@ public partial class PageSearch
 
     private async Task Back()
     {
-        _birthDate = null;
         _isSearch = false;
         _error = "";
-        await _JsRuntime.InvokeVoidAsync("focusBirthday");
+        await _JsRuntime.InvokeVoidAsync("resetBirthdayPicker");
+    }
+
+    public async ValueTask DisposeAsync()
+    {
+        await _JsRuntime.InvokeVoidAsync("destroyBirthdayPicker");
     }
 }

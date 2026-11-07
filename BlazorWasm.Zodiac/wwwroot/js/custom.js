@@ -37,15 +37,94 @@ window.radarChart = function (id, title, traits) {
   return window.zodiacChart.render();
 };
 window.scrollToReading = function () {
-  document
-    .querySelector("#reading")
-    .scrollIntoView({
-      behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches
-        ? "instant"
-        : "smooth",
-      block: "start",
-    });
+  document.querySelector("#reading").scrollIntoView({
+    behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches
+      ? "instant"
+      : "smooth",
+    block: "start",
+  });
 };
 window.focusBirthday = function () {
   document.querySelector("#birthday").focus();
+};
+
+window.initBirthdayPicker = function () {
+  const input = window.jQuery("#birthday");
+  input.attr("aria-expanded", "false");
+  window.jQuery("#birthday-toggle").attr("aria-expanded", "false");
+  const template = ["years", "months", "days"]
+    .map((view, index) => {
+      const unit = ["years", "year", "month"][index];
+      const week =
+        view === "days"
+          ? '<div class="calendar-week" data-view="week"></div>'
+          : "";
+      return `<div class="datepicker-panel" data-view="${view} picker"><div class="calendar-nav"><button type="button" data-view="${unit} prev" aria-label="Previous ${unit}">‹</button><button type="button" data-view="${unit} current" aria-live="polite"></button><button type="button" data-view="${unit} next" aria-label="Next ${unit}">›</button></div>${week}<div class="calendar-grid" data-view="${view}"></div></div>`;
+    })
+    .join("");
+  input.datepicker({
+    format: "yyyy-mm-dd",
+    autoHide: true,
+    autoPick: false,
+    itemTag: "button",
+    trigger: "#birthday-toggle",
+    zIndex: 1000,
+    offset: 8,
+    template: `<div id="birthday-calendar" class="datepicker-container zodiac-datepicker" role="dialog" aria-label="Choose birthday">${template}</div>`,
+    show() {
+      input.attr("aria-expanded", "true");
+      window.jQuery("#birthday-toggle").attr("aria-expanded", "true");
+      queueMicrotask(() => {
+        const picker = window.jQuery("#birthday-calendar");
+        picker.find("button").attr("type", "button");
+        picker.find(".calendar-week button").prop("disabled", true);
+        picker
+          .off(".zodiac")
+          .on("keyup.zodiac", (event) => {
+            if (event.key === "Tab") event.stopPropagation();
+          })
+          .on("keydown.zodiac", (event) => {
+            if (event.key === "Escape") {
+              input[0].focus();
+              input.datepicker("hide");
+            }
+          });
+      });
+    },
+    hide() {
+      input.attr("aria-expanded", "false");
+      window.jQuery("#birthday-toggle").attr("aria-expanded", "false");
+    },
+    pick(event) {
+      if (event.view === "day")
+        queueMicrotask(() => {
+          input[0].focus();
+          input.datepicker("hide");
+        });
+    },
+  });
+  input
+    .on("focus.zodiac", () => input.datepicker("show"))
+    .on("keydown.zodiac", (event) => {
+      if (event.key === "Escape") input.datepicker("hide");
+      if (event.key === "ArrowDown") {
+        event.preventDefault();
+        input.datepicker("show");
+        document
+          .querySelector('#birthday-calendar [data-view="days"] button.picked')
+          ?.focus();
+      }
+    });
+};
+window.readBirthday = function () {
+  const input = window.jQuery("#birthday");
+  input.datepicker("hide");
+  return input.val().trim();
+};
+window.resetBirthdayPicker = function () {
+  window.jQuery("#birthday").datepicker("reset").val("");
+  window.focusBirthday();
+};
+window.destroyBirthdayPicker = function () {
+  window.jQuery("#birthday").off(".zodiac").datepicker("destroy");
 };
