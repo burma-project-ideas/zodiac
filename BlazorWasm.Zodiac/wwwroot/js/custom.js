@@ -1,79 +1,51 @@
-window.radarChart = function (id, title, series) {
-    console.log({ series });
-    var data = series.map(m => m.data);
-    var label = series.map(m => m.label);
-    var options = {
-        series: [{
-            name: 'Percentage',
-            data: data,
-        }],
-        chart: {
-            height: 350,
-            type: 'radar',
+window.radarChart = function (id, title, traits) {
+  if (window.zodiacChart) window.zodiacChart.destroy();
+  window.zodiacChart = new ApexCharts(document.querySelector(id), {
+    series: [{ name: "Trait", data: traits.map((trait) => trait.data) }],
+    chart: {
+      height: 225,
+      type: "radar",
+      fontFamily: "Inter, Arial, sans-serif",
+      toolbar: { show: false },
+      animations: {
+        enabled: !window.matchMedia("(prefers-reduced-motion: reduce)").matches,
+      },
+    },
+    colors: ["#7f56d9"],
+    stroke: { width: 2 },
+    fill: { opacity: 0.12 },
+    markers: { size: 3, colors: ["#7f56d9"], strokeWidth: 0 },
+    plotOptions: {
+      radar: {
+        polygons: {
+          strokeColors: "#e9eaeb",
+          connectorColors: "#e9eaeb",
+          fill: { colors: ["#fff", "#fafafa"] },
         },
-        dataLabels: {
-            enabled: true
-        },
-        plotOptions: {
-            radar: {
-                size: 140,
-                polygons: {
-                    strokeColors: '#e9e9e9',
-                    fill: {
-                        colors: ['#f8f8f8', '#fff']
-                    }
-                }
-            }
-        },
-        //title: {
-        //    text: title
-        //},
-        colors: ['#f4aa36'],
-        markers: {
-            size: 4,
-            colors: ['#fff'],
-            strokeColor: '#FF4560',
-            strokeWidth: 2,
-        },
-        tooltip: {
-            y: {
-                formatter: function (val) {
-                    return val
-                }
-            }
-        },
-        xaxis: {
-            categories: label
-        },
-        yaxis: {
-            tickAmount: 7,
-            labels: {
-                formatter: function (val, i) {
-                    if (i % 2 === 0) {
-                        return val
-                    } else {
-                        return ''
-                    }
-                }
-            }
-        }
-    };
-
-    var chart = new ApexCharts(document.querySelector(id), options);
-    chart.render();
-}
-
-window.setDatePicker = function (id) {
-    $('#' + id).datepicker({
-        format: 'dd-mm-yyyy',
-        autoHide: true
+      },
+    },
+    xaxis: {
+      categories: traits.map((trait) => trait.label),
+      labels: {
+        style: { colors: traits.map(() => "#717680"), fontSize: "9px" },
+      },
+    },
+    yaxis: { min: 0, max: 100, tickAmount: 4, show: false },
+    tooltip: { y: { formatter: (value) => `${value}%` } },
+    responsive: [{ breakpoint: 768, options: { chart: { height: 250 } } }],
+  });
+  return window.zodiacChart.render();
+};
+window.scrollToReading = function () {
+  document
+    .querySelector("#reading")
+    .scrollIntoView({
+      behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches
+        ? "instant"
+        : "smooth",
+      block: "start",
     });
-}
-
-window.getDatePicker = function (id) {
-    return $('#' + id).val();
-}
-
-window.scollTop0 = function (id) {
-    $(window).scrollTop(0);
-}
+};
+window.focusBirthday = function () {
+  document.querySelector("#birthday").focus();
+};

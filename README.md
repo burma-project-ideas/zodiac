@@ -12,6 +12,7 @@
 | --- | --- |
 | [Sann Lynn Htun (@sannlynnhtun-coding)](https://github.com/sannlynnhtun-coding) | မူရင်း [BlazorWasm.Zodiac](https://github.com/sannlynnhtun-coding/BlazorWasm.Zodiac) Web App |
 | [Burma Project Ideas — Zodiac](https://github.com/burma-project-ideas/zodiac) | ရာသီခွင်အကြောင်းအရာ၊ မြန်မာစာသား၊ Traits နဲ့ Image Dataset |
+| [Untitled UI — Landing page 01](https://www.untitledui.com/react/marketing/landing-pages/landing-page-01) | လက်ရှိ Blazor UI ရဲ့ Layout၊ Typography နဲ့ Visual Design Reference |
 | [Astrology HTML Template](https://kamleshyadav.com/html/astrology/version-3/index.html) | မူရင်း App မှာ Credit ပေးထားတဲ့ UI Resource |
 | [Mind Maestro](https://www.mindmaestro.co.uk/zodiac-art) | မူရင်း Project မှာ Credit ပေးထားတဲ့ Zodiac Artwork |
 | [Arkar Myo Min (@akmm-dev)](https://github.com/akmm-dev) | မူရင်း Chinese Zodiac JavaScript Logic အတွက် အကူအညီ |
@@ -20,25 +21,25 @@
 
 ## အသုံးပြုပုံ
 
-1. **Search Zodiac** မှာ မွေးနေ့ကို Date Picker နဲ့ ရွေးပါ။ ရက်စွဲပုံစံက `dd-MM-yyyy` ဖြစ်ပါတယ်။
-2. **Search** ကို နှိပ်ပြီး သက်ဆိုင်ရာ ရာသီခွင်ကို ကြည့်ပါ။ ဥပမာ `15-08-1990` ဆိုရင် **Leo** ဖြစ်ပါတယ်။
+1. **Your reading** မှာ မွေးနေ့ကို Browser ရဲ့ Date Picker နဲ့ ရွေးပါ။ ရက်စွဲဖော်ပြပုံက Browser Language အလိုက် ဖြစ်ပါတယ်။
+2. **Find my sign** ကို နှိပ်ပြီး သက်ဆိုင်ရာ ရာသီခွင်ကို ကြည့်ပါ။ ဥပမာ `15-08-1990` ဆိုရင် **Leo** ဖြစ်ပါတယ်။
 3. ရာသီခွင်ရဲ့ မြန်မာလ၊ Sign ပုံ၊ Personality Traits Chart၊ Element၊ Life Purpose၊ Loyal၊ Angry၊ Character၊ Pretty Features နဲ့ Representative Flower အကြောင်းတွေကို ဖတ်နိုင်ပါတယ်။
-4. **Back** နဲ့ ပြန်သွားပြီး နောက်ရက်စွဲတစ်ခုကို ရှာနိုင်ပါတယ်။ ပင်မစာမျက်နှာရှိ **Horoscope Forecasts** ထဲက ရာသီခွင်ကိုလည်း တိုက်ရိုက်ရွေးနိုင်ပါတယ်။
+4. **Start a new reading** နဲ့ မွေးနေ့ကို ပြန်ရွေးနိုင်ပါတယ်။ **Zodiac signs** ထဲက ရာသီခွင်ကိုလည်း တိုက်ရိုက်ရွေးနိုင်ပါတယ်။
 
 ## App ရဲ့ Workflow
 
-`Program.cs` က Blazor App နဲ့ `ZodiacService` ကို Register လုပ်ပါတယ်။ `PageHome` က `PageSearch` ကို ပြသပြီး JavaScript Interop နဲ့ Date Picker ကို ချိတ်ဆက်ပါတယ်။
+`Program.cs` က Blazor App နဲ့ `ZodiacService` ကို Register လုပ်ပါတယ်။ `PageHome` က `PageSearch` ကို ပြသပြီး Native Date Input က မွေးနေ့ကို လက်ခံပါတယ်။
 
-**Search** နှိပ်တဲ့အခါ `PageSearch.razor.cs` က ရက်စွဲကို ဖတ်ပြီး `ZodiacService.GetHoroscope()` နဲ့ လ၊ ရက်အလိုက် Western Zodiac Sign ကို တွက်ပါတယ်။ ရလာတဲ့ Sign နာမည်နဲ့ `JsonData.FindZodiacSign()` က သက်ဆိုင်ရာ Data ကို ရှာပြီး UI မှာ ပြပါတယ်။ Traits တွေကို Bundled ApexCharts Library နဲ့ Radar Chart အဖြစ် ဆွဲပါတယ်။
+**Find my sign** နှိပ်တဲ့အခါ `PageSearch.razor.cs` က ရက်စွဲကို ဖတ်ပြီး `ZodiacService.GetHoroscope()` နဲ့ လ၊ ရက်အလိုက် Western Zodiac Sign ကို တွက်ပါတယ်။ ရလာတဲ့ Sign နာမည်နဲ့ `JsonData.FindZodiacSign()` က သက်ဆိုင်ရာ Data ကို ရှာပြီး UI မှာ ပြပါတယ်။ Traits တွေကို Bundled ApexCharts Library နဲ့ Radar Chart အဖြစ် ဆွဲပါတယ်။
 
 ```mermaid
 flowchart TD
     Open["App ဖွင့်မယ်"] --> Choose["မွေးနေ့ ရွေးမယ်"]
-    Choose --> Search["Search နှိပ်မယ်"]
+    Choose --> Search["Find my sign နှိပ်မယ်"]
     Search --> Calculate["ZodiacService နဲ့ ရာသီခွင် တွက်မယ်"]
     Calculate --> Find["JsonData ထဲက Sign Data ရှာမယ်"]
     Find --> Show["ပုံ၊ မြန်မာစာနဲ့ Traits Chart ပြမယ်"]
-    Show --> Back["Back နဲ့ နောက်တစ်ကြိမ် ရှာမယ်"]
+    Show --> Back["နောက်တစ်ကြိမ် ရှာမယ်"]
     Back --> Choose
 ```
 
@@ -96,13 +97,14 @@ GitHub Repository က Vercel Project **zodiac** နဲ့ ချိတ်ဆက�
 
 Vercel ရဲ့ Root Directory ကို Repository Root၊ Framework Preset ကို **Other** ထားပါတယ်။ [`vercel.json`](vercel.json) က [`scripts/vercel-build.sh`](scripts/vercel-build.sh) ကို Run ပြီး SDK မရှိရင် Install လုပ်ကာ Blazor App ကို Publish လုပ်ပါတယ်။ Environment Variables နဲ့ Server Database မလိုပါဘူး။
 
-App မှာ ApexCharts **3.40.0** နဲ့ License ကို Bundle လုပ်ထားတဲ့အတွက် Chart ပြဖို့ ပြင်ပ CDN မလိုပါဘူး။ Date Picker၊ Styles နဲ့ Artwork တွေကိုလည်း App နဲ့အတူ Serve လုပ်ပါတယ်။ မူရင်း PWA Service Worker ပါဝင်ပြီး ပထမဆုံးဖွင့်တဲ့အခါ Internet Connection လိုပါတယ်။
+App မှာ ApexCharts **3.40.0** နဲ့ License ကို Bundle လုပ်ထားတဲ့အတွက် Chart ပြဖို့ ပြင်ပ CDN မလိုပါဘူး။ Inter Font၊ Styles နဲ့ Artwork တွေကိုလည်း App နဲ့အတူ Serve လုပ်ပါတယ်။ Date Picker က Browser ရဲ့ Native Control ဖြစ်ပါတယ်။ မူရင်း PWA Service Worker ပါဝင်ပြီး ပထမဆုံးဖွင့်တဲ့အခါ Internet Connection လိုပါတယ်။
 
 ## စစ်ဆေးမယ်
 
 ```powershell
 node zodiac.test.js
 node scripts/verify-blazor-data.cjs
+node scripts/verify-reading-ui.cjs
 dotnet test .\tests\Zodiac.Tests\Zodiac.Tests.csproj
 ```
 

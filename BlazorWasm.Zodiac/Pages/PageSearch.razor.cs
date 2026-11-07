@@ -1,4 +1,4 @@
-﻿using BlazorWasm.Zodiac.Data;
+using BlazorWasm.Zodiac.Data;
 using BlazorWasm.Zodiac.Models;
 using Microsoft.JSInterop;
 
@@ -6,67 +6,50 @@ namespace BlazorWasm.Zodiac.Pages;
 
 public partial class PageSearch
 {
-    private string _date = "";
-    private int _index = 0;
-    private bool _isSearch = false;
-    private ZodiacSignModel _zodiacSign;
+    private DateTime? _birthDate;
+    private bool _isSearch;
+    private bool _renderChart = true;
+    private string _error = "";
+    private ZodiacSignModel _zodiacSign = JsonData.ZodiacSigns[4];
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
-        if (firstRender)
+        if (!_renderChart) return;
+        _renderChart = false;
+        var traits = _zodiacSign.Traits.Select(trait => new ChartModel { data = trait.Percentage, label = trait.Name }).ToList();
+        await _JsRuntime.InvokeVoidAsync("radarChart", "#chart", "Personality traits", traits);
+    }
+
+    private async Task SearchDate()
+    {
+        if (!_birthDate.HasValue)
         {
-            await BindDatePicker();
+            _error = "Choose your birthday to find your sign.";
+            return;
         }
-    }
-
-    async Task BindDatePicker()
-    {
-        await _JsRuntime.InvokeVoidAsync("setDatePicker", "txtChooseDate");
-    }
-
-    async Task SearchDate()
-    {
-        _date = await _JsRuntime.InvokeAsync<string>("getDatePicker", "txtChooseDate");
-        if (string.IsNullOrEmpty(_date)) return;
-        string[] dateArr = _date.Split("-");
-        DateTime dt = Convert.ToDateTime($"{dateArr[2]}-{dateArr[1]}-{dateArr[0]}");
-        var horoscope = _ZodiacService.GetHoroscope(dt);
-        var chinese = _ZodiacService.GetChineseZodiac(dt.Year);
-        await Sign(horoscope.ToString());
+        await Sign(_ZodiacService.GetHoroscope(_birthDate.Value).ToString());
     }
 
     private async Task Sign(string name)
     {
-        (_index, _zodiacSign) = JsonData.FindZodiacSign(name);
-        if (_zodiacSign == null) return;
-        _isSearch = true;
-        StateHasChanged();
-        await SetChart();
-        await _JsRuntime.InvokeVoidAsync("scollTop0");
-    }
-
-    private async Task SetChart()
-    {
-        await Task.Delay(TimeSpan.FromMilliseconds(200));
-        var data = _zodiacSign.Traits.Select(x => new ChartModel
+        var (_, sign) = JsonData.FindZodiacSign(name);
+        if (sign is null)
         {
-            data = x.Percentage,
-            label = x.Name,
-        }).ToList();
-        await _JsRuntime.InvokeVoidAsync
-        (
-            "radarChart",
-            "#chart",
-            "Personality Traits",
-            data
-        );
+            _error = "This reading is unavailable. Please choose another sign.";
+            return;
+        }
+        _zodiacSign = sign;
+        _isSearch = true;
+        _error = "";
+        _renderChart = true;
+        await _JsRuntime.InvokeVoidAsync("scrollToReading");
     }
 
-    async Task Back()
+    private async Task Back()
     {
-        _date = "";
+        _birthDate = null;
         _isSearch = false;
-        await Task.Delay(TimeSpan.FromMilliseconds(200));
-        await BindDatePicker();
+        _error = "";
+        await _JsRuntime.InvokeVoidAsync("focusBirthday");
     }
 }

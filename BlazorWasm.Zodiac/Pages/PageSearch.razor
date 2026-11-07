@@ -1,174 +1,32 @@
 @using BlazorWasm.Zodiac.Data
 @using BlazorWasm.Zodiac.Models
-@if (!_isSearch)
+<section class="hero">
+    <a class="announcement" href="#signs"><span><i></i> Written in the stars</span> A little self discovery <b aria-hidden="true">→</b></a>
+    <h1>Your birthday. A whole<br class="desktop-break" /> new way to see yourself.</h1>
+    <p>Get to know your zodiac sign, explore what makes you unique,<br class="desktop-break" /> and discover your story — in English and Myanmar.</p>
+    <div class="hero-actions"><a class="button" href="#signs"><span aria-hidden="true">◎</span> Explore the signs</a><a class="button primary" href="#reading">Find my sign <span aria-hidden="true">→</span></a></div>
+</section>
+<section class="workspace-wrap" id="reading" aria-label="Zodiac reading">
+ <div class="workspace">
+    <aside class="workspace-sidebar" aria-label="Reading overview"><span class="mini-brand"><span class="brand-mark" aria-hidden="true">✦</span> Your universe</span><a class="sidebar-active" href="#reading"><span aria-hidden="true">◈</span> Overview</a><a href="#signs"><span aria-hidden="true">◎</span> All zodiac signs</a><a href="#about"><span aria-hidden="true">◇</span> How it works</a><div class="sidebar-note"><span class="small-star" aria-hidden="true">✦</span><strong>A little insight goes a long way.</strong><p>Start with your birthday.<br />Discover something new.</p></div><div class="sidebar-credit"><span class="avatar">B</span><div><strong>Burma Project Ideas</strong><small>Made for everyone</small></div></div></aside>
+    <div class="workspace-main">
+        <div class="workspace-heading"><div><span class="eyebrow">YOUR PERSONAL COSMIC GUIDE</span><h2>Your zodiac, at a glance</h2><p>A fresh perspective, written in the stars.</p></div><span class="live-badge"><i></i> Free to explore</span></div>
+        <form class="birthday-form" @onsubmit="SearchDate" @onsubmit:preventDefault><div><label for="birthday">Your birthday</label><input id="birthday" type="date" @bind="_birthDate" required aria-describedby="birthday-hint" /><span id="birthday-hint">Just your birthday. No account needed.</span></div><button class="button primary" type="submit">Find my sign <span aria-hidden="true">→</span></button></form>
+        @if (!string.IsNullOrEmpty(_error)) { <p class="error" role="alert">@_error</p> }
+        <div class="reading-status" role="status">@(_isSearch ? "Your reading is ready. Meet " + _zodiacSign.Name + "." : "A little preview · Choose your birthday for your own reading")</div>
+        <div class="reading-grid">
+            <article class="sign-summary"><span class="eyebrow">@(_isSearch ? "YOUR ZODIAC SIGN" : "AN EXAMPLE READING")</span><div class="sign-title"><div><h3>@_zodiacSign.Name</h3><p>@_zodiacSign.Dates</p></div><span class="sign-symbol"><img src="@_zodiacSign.ZodiacSignImageUrl" alt="" /></span></div><div class="sign-tags"><span>@_zodiacSign.Element sign</span><span lang="my">@_zodiacSign.MyanmarMonth</span></div><div class="sign-art"><img src="@_zodiacSign.ZodiacSign2ImageUrl" alt="@(_zodiacSign.Name + " zodiac artwork")" /></div><span class="art-caption">A sign with a story of its own.</span></article>
+            <article class="traits-panel"><div class="panel-heading"><h3>Personality traits</h3><span class="subtle-icon" aria-hidden="true">◉</span></div><p>The qualities that make this sign unique.</p><div id="chart" role="img" aria-label="@(_zodiacSign.Name + " personality radar chart")"></div><div class="trait-legend">@foreach (var trait in _zodiacSign.Traits) { <span><i></i>@trait.Name <b>@trait.Percentage%</b></span> }</div></article>
+        </div>
+        @if (_isSearch) { <div class="reading-actions"><button class="text-button" @onclick="Back">← Start a new reading</button><a href="#story">Explore your full story ↓</a></div> }
+    </div>
+ </div>
+</section>
+<section class="community-strip"><p>A community project. A universe of possibilities.</p><div><strong>Burma Project Ideas</strong><span>12 zodiac signs</span><span>Myanmar stories</span><span>One unique you</span></div></section>
+@if (_isSearch)
 {
-    <section class="as_appointment_wrapper as_padderBottom40 as_padderTop100">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h1 class="as_heading as_heading_center">Search Zodiac</h1>
-                    <span>
-                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="240" height="15" viewBox="0 0 240 15">
-                            <image id="Vector_Smart_Object" data-name="Vector Smart Object" width="240" height="15" xlink:href="data:img/png;base64,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" />
-                        </svg>
-                    </span>
-                </div>
-                <div class="col-lg-10 offset-lg-1 col-md-10 offset-md-1 col-sm-12">
-                    <form class="as_appointment_form">
-                        <div class="row">
-                            <div class="col-lg-3 col-md-3"></div>
-                            <div class="col-lg-6 col-md-6 col-sm-12">
-                                <div class="form-group">
-                                    @* <input type="date" placeholder="Choose Date" class="form-control as_datepicker"> *@
-                                    <input type="text" placeholder="Choose Date" @bind="_date" id="txtChooseDate" class="form-control as_datepicker">
-                                    @* <span><img src="assets/images/svg/calendar.svg" alt=""></span> *@
-                                </div>
-                                <div class="col-lg-12" style="text-align: center;">
-                                    <button class="as_btn" type="button" @onclick="SearchDate">Search</button>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-3"></div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="as_horoscope_wrapper as_padderBottom80 as_padderTop80">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 col-md-12 text-center">
-                    <h1 class="as_heading">Horoscope Forecasts</h1>
-                    <span>
-                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="240" height="15" viewBox="0 0 240 15">
-                            <image id="Vector_Smart_Object" data-name="Vector Smart Object" width="240" height="15" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPAAAAAPCAYAAADakUJeAAAJFUlEQVRoge2bC5CVZRnHf4suqCiXhYo1kbsBuparkZmSE0laZIVjlkZaaVmm2W1yxm5azeQMFmpOY9rFUCpNTLAyqEbUQh0uCSKgglxMzHB18YZJ+zTP8/3P2W/P+c6eC4eSOO/Mmf3e+/X/PP/ned9tev6mSRQFK07Kh1rystJ3Ks2qb6t8/LXAO4A3AUdgjARa9Ouj+tuAF4BNGJuAh4AHMe4DNlfUVzXjqkOe7YI265Q3HHgLxmHARODg+Bn9gQEq2wV06LcBYznwN+DPwFNV73ElZep9VuuZntHWng7gJuB9wHlYAPVJ4DngeSz+PgX8Q4B9EdgfGAKMEMBHAKMxxgJPAH8Efo9xO0T54r53HYAP0NgrAXBm2V0M4P2AaRgnAe8EDgQexVgPbAyA+l/j6Vh/L28B6tdBCNcDsFh/H/uwALVxNXBbvpcGgKtvoOYB/W8B3IRxPvARYKDie4em7QawH6J+0g5DsADz3cBdwJ8wVqXadq3RBrQDkzCOkqa4AVggTVLJuKoFhguTbwMfwIIdrAHWYiyMfnsCeCpwAsYbgPHScrdifBUCNLsCwM5cpmqdndkswbgfWAasDDbTXfZQYArGZOC4AK2xFVgNvBzCsxvAvp47sKjdqXW+SvHS4yo3j0rrVJNWqmwt6Rl19kQAtwlUTn8vDzD6AUnyW4I+w2SMaRD0bhFwJ8Y/lTcFOARjLXAzMBvj4Yy+Rgo0EzAeAOYGBa8fgPsKCK7pz1EfubxTBIILBeBZEj63pNp4I3AtFprRBc+/6ghgFw7Tow8LAC6Qhi0s6+s4AzgVQrA8jMV+OFV+DcbxwNvDTIHbsRCey0Wpva1+2o8vhqBNhMXKkuMqN49K61STVqpsLekZdbIAfDTG54HTquq02gH9dwC8l6R1WjYvDaprfKXXNpK4H6oPA2dgjBHYr49DklBBB8pRGPdA0Lm5JYDgWv6jOrB3Ar8DXuql397GlPs+QcBoBfbRYb85pdVc8FwkAH9XQMixhVNDKMF2jC0SNAt3EsD7Au8GjpdA+3lox+J6fQXu84BjMZaEYHHTw4WrcaZAuQ7jRuAXwSrKjQEuw4KaH5nKbxKr+ndF88iK72xaqfrVp/s6XIFxbzqxj/66TXGWnAOLZXcQmgh+ALHpu1NwreKH9lnZtRNSY2/LH4gk+CZ/HPigvtPBy30TGBeHLdEiV0ubjQLOlR08D0IguGPrEq1nOnQGxUs0xSCBZzZwItBc47rmaHmTxjVI+5ULL4uWHqrvXJisshtS8+0qar2y0Kw5zJbAGKQ5XqU5p8Mwrc0mrdU8rd25Wsu7tbYbtNbjtPZrC9pp0l75nqX3a632NheO0N4/K6a1u51hNxVmSbgiQb1YGD0rd8ZcA/8QOBvCBkyCxQZcIDpymKTjROWVDq8eDdwfY2gqfinGN/TtEv8ejAsVbw7tYdwK/AX4emab3fF9ZXPO0OIuw7gCuAlCS5+OhWPM6e33gBUZ2soF58nA+VjYhr+R9nSqvr3kvIop9Gr97sI4R9pnmyj0Lx280sBur39IFHqAWMi1MhUmSMBVSqH3kZZ1Lf7+sPWT8zIvLwh61jsc+IJo+m0Yc0K7JiD8HBbpCyQE3CZ/qcz8LwXepj3wsq8odxYW6W9W/BJMe5mErQU2d/k1rkdaqTbLp68So3lQgulKnZdc2AFcl6PQ+4VLP6FWZ2IB3KMhFv+twE/yC7V7ALgvxpdEWzvjsFh4OpHGuBGLRXki1YabDZ8OmpvVZna8VfTaJeJgaZBr5EltE1UcKKfSHQVUPteOe7A/GeueeFpdO/9BdvrqkmNIvg+RwOnCQrs9DvwUC7B+DfiOAHwx8K0AtfEx4CAIgebOOwfEI2XmPEH25bsCvO7oszAlfiRPcmG9PirrTrNOmRYr5Qx0jfsZ2bHXiyZv6WWOhXGn5650vp/KP1BmzRla5yQtEcoDRednlhVSWfGdTStVv3y6K5bPAvNjjQnq3KZ1d2HvV5cvZtnArfLQXpzZxe7vxPJwkjTIAlEV9xyf7hIttEL5+lkHrV3U5r1YaKPLRRc9f3ykJ2u7TBT68YJ29pJmO0VCZpS8sEvl0fb75s26b+6Qpm4RiA/HQliNDyZlYV/+ON980sfZYQ5ZSO41OtQrZK92yI5u0f3s8GBeCTtwrT4U4zGB4xYxhUK78iCBu1129fzoJ8k7WNT6ZCzSfyaGUosPwDXRJ4A58mg/Jyb0ayx8C6XrV7uv9Ugr1Wb16TPjTFlK2DXugcMRNEWH/l5pimIaWC7es2wzFgA8Tdczfr3xqPIcJNPFDEYEZbf81dRjBW2N1nVUm5jQcJkFg3Wl8ozqPKT71f0FMKdZG3oMrbvNkaK7J+qu1T27E2WDDtbV2TOim5sxVkhzLtF9bXrOo2RPHyfqulFCYW7KDBiLhSnmguFXMT7LU95q1zVtfkyXs3WHHIsLK9qzSsq8egGcmbenA7g+8dJtDRC43Cm4Xgc451BqkbaeJkB1yja/T1rXNW5HyTFaOKfcTJgRQLbQsIsKy1lxPeSRvk5afrak+6pe5tGiF1NHytQ6Vp71OyQE5uevdvzuPBFgY8KJlDxq2VbTOtd7z+pVp5q0UmVrSc+o0wBwPeKVteWg+ZS03Bxp3S7l9VP+VCzub9vFCraKhnfIAdOsG4IxehzSXx7dK3tY1+UBjDy4F2Bcpueh/uhinV6evSJHYIvo71Bpu2XyFrt9vijv3U5s3snhwEvYwTVZwqTqeAPAZfMaAK5HvDqt4tcbF8k56F5Ztyn/Gg6W7rLNYc9a2LfDUu+xOwRat5XHyfZb19t4egFwLj5WTrNH5EB7Qf11qb8n9cBiTcrji7zgx8RdeOJ1X6yru+V1A2EDwGXzGgCuR7y2QzkivM8WzwyHCsQP6IXYlrBDE63n74BfH/Q1ebwxRB7YmfEQo/c+KgEwYgBflif+admUSzH+rvfge8v+btV1or+wOka28g1YeKM3ZvbRAHADwMVp/xcATsfb9cB/kmzbVl0/IS/ret03/xbit73SPioEcO7b73jfo597k0fLS4+ug7bofvJ+LP5xo1ZPcqXjqb1uVrxedapJK1W2lvTCOsB/AGhRDpjYuAlQAAAAAElFTkSuQmCC" />
-                        </svg>
-                    </span>
-                    <p class="as_font14 as_padderTop20 as_padderBottom20">It is a long established fact that a reader will be distracted by the readable content of a page <br>when looking at its layout. The point of using Lorem Ipsum .</p>
-                </div>
-                @for (int i = 1; i <= 12; i++)
-                {
-                    var item = JsonData.ZodiacSigns[i - 1];
-                    <div class="col-lg-2 col-sm-4 col-xs-6" @onclick=@(args => Sign(item.Name))>
-                        <div class="as_sign_box text-center">
-                            <a href="javascript:;">
-                                <span class="as_sign">
-                                    <img src="assets/images/svg/horoscope/h@(i).svg" alt="">
-                                </span>
-                                <div>
-                                    <h5>@item.Name</h5>
-                                    <p>@item.Dates</p>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                }
-            </div>
-        </div>
-    </section>
+<section class="section stories" id="story"><div class="section-heading"><span class="eyebrow">MORE THAN A SIGN</span><h2>The story of @_zodiacSign.Name</h2><p>Your character, connections, and the little things that make you, you.</p></div><div class="story-grid">@foreach (var entry in new[] { ("Life purpose", _zodiacSign.LifePurpose), ("Loyalty & connections", _zodiacSign.Loyal), ("When emotions run high", _zodiacSign.Angry), ("Your character", _zodiacSign.Character), ("Your unique features", _zodiacSign.PrettyFeatures), ("Representative flower", _zodiacSign.RepresentativeFlower) }) { <article class="story"><h3>@entry.Item1</h3><p lang="my">@entry.Item2</p></article> }</div></section>
 }
-else
-{
-    <section class="as_service_wrapper as_padderTop80 as_padderBottom80">
-        <div class="container">
-            <div class="col-lg-12" style="text-align: center;">
-                <button class="as_btn" type="button" @onclick="Back">Back</button>
-            </div>
-            <div class="row as_verticle_center">
-                <div class="col-lg-12 col-md-12 col-sm-12">
-                    <div class="as_sign_box text-center">
-                        <a href="javascript:void(0);">
-                            <span class="as_sign">
-                                <img src="assets/images/svg/horoscope/h@(_index + 1).svg" alt="">
-                            </span>
-                            <div>
-                                <h5>@_zodiacSign.Name</h5>
-                                <p>@_zodiacSign.Dates</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="text-center">
-                <div class="row">
-                    <div class="col-lg-3 col-md-4 col-sm-4">
-                        <div class="as_service_box text-center" style="height: 95%;">
-                            <h3> မြန်မာလ </h3>
-                            <h5> - </h5>
-                            <h3> @_zodiacSign.MyanmarMonth </h3>
-                            <h3> Sign </h3>
-                            <span class="as_sign">
-                                <img src="@(_zodiacSign.ZodiacSignImageUrl)" alt="" style="width:85px; height: 85px">
-                            </span>
-                            <img class="mt-2 rounded" src="@(_zodiacSign.ZodiacSign2ImageUrl)" alt="">
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-6">
-                        <h1 class="as_heading as_heading_center" style="margin-top: 20px">Personality Traits</h1>
-                        <span>
-                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="240" height="15" viewBox="0 0 240 15">
-                                <image id="Vector_Smart_Object" data-name="Vector Smart Object" width="240" height="15" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPAAAAAPCAYAAADakUJeAAAJFUlEQVRoge2bC5CVZRnHf4suqCiXhYo1kbsBuparkZmSE0laZIVjlkZaaVmm2W1yxm5azeQMFmpOY9rFUCpNTLAyqEbUQh0uCSKgglxMzHB18YZJ+zTP8/3P2W/P+c6eC4eSOO/Mmf3e+/X/PP/ned9tev6mSRQFK07Kh1rystJ3Ks2qb6t8/LXAO4A3AUdgjARa9Ouj+tuAF4BNGJuAh4AHMe4DNlfUVzXjqkOe7YI265Q3HHgLxmHARODg+Bn9gQEq2wV06LcBYznwN+DPwFNV73ElZep9VuuZntHWng7gJuB9wHlYAPVJ4DngeSz+PgX8Q4B9EdgfGAKMEMBHAKMxxgJPAH8Efo9xO0T54r53HYAP0NgrAXBm2V0M4P2AaRgnAe8EDgQexVgPbAyA+l/j6Vh/L28B6tdBCNcDsFh/H/uwALVxNXBbvpcGgKtvoOYB/W8B3IRxPvARYKDie4em7QawH6J+0g5DsADz3cBdwJ8wVqXadq3RBrQDkzCOkqa4AVggTVLJuKoFhguTbwMfwIIdrAHWYiyMfnsCeCpwAsYbgPHScrdifBUCNLsCwM5cpmqdndkswbgfWAasDDbTXfZQYArGZOC4AK2xFVgNvBzCsxvAvp47sKjdqXW+SvHS4yo3j0rrVJNWqmwt6Rl19kQAtwlUTn8vDzD6AUnyW4I+w2SMaRD0bhFwJ8Y/lTcFOARjLXAzMBvj4Yy+Rgo0EzAeAOYGBa8fgPsKCK7pz1EfubxTBIILBeBZEj63pNp4I3AtFprRBc+/6ghgFw7Tow8LAC6Qhi0s6+s4AzgVQrA8jMV+OFV+DcbxwNvDTIHbsRCey0Wpva1+2o8vhqBNhMXKkuMqN49K61STVqpsLekZdbIAfDTG54HTquq02gH9dwC8l6R1WjYvDaprfKXXNpK4H6oPA2dgjBHYr49DklBBB8pRGPdA0Lm5JYDgWv6jOrB3Ar8DXuql397GlPs+QcBoBfbRYb85pdVc8FwkAH9XQMixhVNDKMF2jC0SNAt3EsD7Au8GjpdA+3lox+J6fQXu84BjMZaEYHHTw4WrcaZAuQ7jRuAXwSrKjQEuw4KaH5nKbxKr+ndF88iK72xaqfrVp/s6XIFxbzqxj/66TXGWnAOLZXcQmgh+ALHpu1NwreKH9lnZtRNSY2/LH4gk+CZ/HPigvtPBy30TGBeHLdEiV0ubjQLOlR08D0IguGPrEq1nOnQGxUs0xSCBZzZwItBc47rmaHmTxjVI+5ULL4uWHqrvXJisshtS8+0qar2y0Kw5zJbAGKQ5XqU5p8Mwrc0mrdU8rd25Wsu7tbYbtNbjtPZrC9pp0l75nqX3a632NheO0N4/K6a1u51hNxVmSbgiQb1YGD0rd8ZcA/8QOBvCBkyCxQZcIDpymKTjROWVDq8eDdwfY2gqfinGN/TtEv8ejAsVbw7tYdwK/AX4emab3fF9ZXPO0OIuw7gCuAlCS5+OhWPM6e33gBUZ2soF58nA+VjYhr+R9nSqvr3kvIop9Gr97sI4R9pnmyj0Lx280sBur39IFHqAWMi1MhUmSMBVSqH3kZZ1Lf7+sPWT8zIvLwh61jsc+IJo+m0Yc0K7JiD8HBbpCyQE3CZ/qcz8LwXepj3wsq8odxYW6W9W/BJMe5mErQU2d/k1rkdaqTbLp68So3lQgulKnZdc2AFcl6PQ+4VLP6FWZ2IB3KMhFv+twE/yC7V7ALgvxpdEWzvjsFh4OpHGuBGLRXki1YabDZ8OmpvVZna8VfTaJeJgaZBr5EltE1UcKKfSHQVUPteOe7A/GeueeFpdO/9BdvrqkmNIvg+RwOnCQrs9DvwUC7B+DfiOAHwx8K0AtfEx4CAIgebOOwfEI2XmPEH25bsCvO7oszAlfiRPcmG9PirrTrNOmRYr5Qx0jfsZ2bHXiyZv6WWOhXGn5650vp/KP1BmzRla5yQtEcoDRednlhVSWfGdTStVv3y6K5bPAvNjjQnq3KZ1d2HvV5cvZtnArfLQXpzZxe7vxPJwkjTIAlEV9xyf7hIttEL5+lkHrV3U5r1YaKPLRRc9f3ykJ2u7TBT68YJ29pJmO0VCZpS8sEvl0fb75s26b+6Qpm4RiA/HQliNDyZlYV/+ON980sfZYQ5ZSO41OtQrZK92yI5u0f3s8GBeCTtwrT4U4zGB4xYxhUK78iCBu1129fzoJ8k7WNT6ZCzSfyaGUosPwDXRJ4A58mg/Jyb0ayx8C6XrV7uv9Ugr1Wb16TPjTFlK2DXugcMRNEWH/l5pimIaWC7es2wzFgA8Tdczfr3xqPIcJNPFDEYEZbf81dRjBW2N1nVUm5jQcJkFg3Wl8ozqPKT71f0FMKdZG3oMrbvNkaK7J+qu1T27E2WDDtbV2TOim5sxVkhzLtF9bXrOo2RPHyfqulFCYW7KDBiLhSnmguFXMT7LU95q1zVtfkyXs3WHHIsLK9qzSsq8egGcmbenA7g+8dJtDRC43Cm4Xgc451BqkbaeJkB1yja/T1rXNW5HyTFaOKfcTJgRQLbQsIsKy1lxPeSRvk5afrak+6pe5tGiF1NHytQ6Vp71OyQE5uevdvzuPBFgY8KJlDxq2VbTOtd7z+pVp5q0UmVrSc+o0wBwPeKVteWg+ZS03Bxp3S7l9VP+VCzub9vFCraKhnfIAdOsG4IxehzSXx7dK3tY1+UBjDy4F2Bcpueh/uhinV6evSJHYIvo71Bpu2XyFrt9vijv3U5s3snhwEvYwTVZwqTqeAPAZfMaAK5HvDqt4tcbF8k56F5Ztyn/Gg6W7rLNYc9a2LfDUu+xOwRat5XHyfZb19t4egFwLj5WTrNH5EB7Qf11qb8n9cBiTcrji7zgx8RdeOJ1X6yru+V1A2EDwGXzGgCuR7y2QzkivM8WzwyHCsQP6IXYlrBDE63n74BfH/Q1ebwxRB7YmfEQo/c+KgEwYgBflif+admUSzH+rvfge8v+btV1or+wOka28g1YeKM3ZvbRAHADwMVp/xcATsfb9cB/kmzbVl0/IS/ret03/xbit73SPioEcO7b73jfo597k0fLS4+ug7bofvJ+LP5xo1ZPcqXjqb1uVrxedapJK1W2lvTCOsB/AGhRDpjYuAlQAAAAAElFTkSuQmCC"></image>
-                            </svg>
-                        </span>
-                        <p class="as_font14 as_padderTop20 as_padderBottom20"></p>
-                        <div id="chart"></div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-4">
-                        <div class="as_service_box text-center" style="height: 95%;">
-                            <h3> ဒြပ် / ELEMENT </h3>
-                            <h3> @_zodiacSign.Element </h3>
-                            <img src="@_zodiacSign.ElementImageUrl" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="align-content-center">
-                <div class="as_about_detail mb-2">
-                    <h1 class="as_heading as_heading_center mt-3">Life Purpose</h1>
-                    <div class="as_paragraph_wrapper">
-                        <p class="as_margin0 as_font14 as_padderBottom10"> @_zodiacSign.LifePurpose </p>
-                    </div>
-                </div>
-                <div class="as_about_detail mb-2">
-                    <h1 class="as_heading as_heading_center mt-3">Loyal</h1>
-                    <div class="as_paragraph_wrapper">
-                        <p class="as_margin0 as_font14 as_padderBottom10"> @_zodiacSign.Loyal </p>
-                    </div>
-                </div>
-                <div class="as_about_detail mb-2">
-                    <h1 class="as_heading as_heading_center mt-3">Angry</h1>
-                    <div class="as_paragraph_wrapper">
-                        <p class="as_margin0 as_font14 as_padderBottom10"> @_zodiacSign.Angry </p>
-                    </div>
-                </div>
-                <div class="as_about_detail mb-2">
-                    <h1 class="as_heading as_heading_center mt-3">Character</h1>
-                    <div class="as_paragraph_wrapper">
-                        <p class="as_margin0 as_font14 as_padderBottom10"> @_zodiacSign.Character </p>
-                    </div>
-                </div>
-                <div class="as_about_detail mb-2">
-                    <h1 class="as_heading as_heading_center mt-3">Pretty Features</h1>
-                    <div class="as_paragraph_wrapper">
-                        <p class="as_margin0 as_font14 as_padderBottom10"> @_zodiacSign.PrettyFeatures </p>
-                    </div>
-                </div>
-            </div>
-            <div class="row mt-5">
-                <div class="col-lg-4 col-md-4">
-                    <div class="as_aboutimg text-right">
-                        <img src="images/representative-flower/@(_index + 1).jpg" alt="" style="height:auto">
-                    </div>
-                </div>
-                <div class="col-lg-8 col-md-8">
-                    <div class="as_about_detail">
-                        <h1 class="as_heading"> Representative Flower </h1>
-                        <div class="as_paragraph_wrapper">
-                            <p class="as_margin0 as_font14 as_padderBottom10"> @_zodiacSign.RepresentativeFlower </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-}
+<section class="section" id="signs"><div class="section-heading"><span class="eyebrow">TWELVE SIGNS. ENDLESS PERSONALITIES.</span><h2>Find a little of yourself in the stars.</h2><p>Get curious. Explore every sign and see what makes each one special.</p></div><div class="signs-grid">@foreach (var sign in JsonData.ZodiacSigns) { <button class="sign-card" @onclick="() => Sign(sign.Name)"><span class="catalog-symbol"><img src="@sign.ZodiacSignImageUrl" alt="" loading="lazy" /></span><strong>@sign.Name <span aria-hidden="true">↗</span></strong><span>@sign.Dates</span><small>@sign.Element</small></button> }</div></section>
+<section class="about-section" id="about"><div class="section-heading"><span class="eyebrow">SIMPLE BY DESIGN</span><h2>A little insight. No extra steps.</h2><p>Everything you need to explore your sign, all in one place.</p></div><div class="features"><article><span class="feature-icon" aria-hidden="true">◎</span><h3>Start with a birthday</h3><p>Choose a date and discover the Western zodiac sign that goes with it.</p></article><article><span class="feature-icon" aria-hidden="true">◈</span><h3>See the bigger picture</h3><p>Explore personality traits, elements, flowers, and stories in Myanmar.</p></article><article><span class="feature-icon" aria-hidden="true">◇</span><h3>Keep your birthday yours</h3><p>Your reading happens in your browser. No sign-up, no database, no fuss.</p></article></div></section>
+<section class="section faq-section" id="faq"><div class="section-heading"><h2>Frequently asked questions</h2><p>A few things you might be wondering.</p></div><div class="faq-list"><details open><summary>How is my zodiac sign calculated?</summary><p>We use the month and day of your birthday to find your Western sun sign. Each sign has a fixed date range, which you can see above.</p></details><details><summary>Where do the Myanmar stories come from?</summary><p>The descriptions, personality traits, and original artwork dataset come from Burma Project Ideas. You can find the full credits in our GitHub repository.</p></details><details><summary>Do I need an account?</summary><p>No. The app runs in your browser and does not send your birthday to a server or store it in a database.</p></details><details><summary>Are these readings scientific predictions?</summary><p>No. Explore them for entertainment, cultural interest, and self reflection.</p></details></div><div class="bottom-cta"><span class="brand-mark" aria-hidden="true">✦</span><h3>Your story starts with a date.</h3><p>Get curious about what makes you unique.</p><a class="button primary" href="#reading">Find my sign <span aria-hidden="true">→</span></a></div></section>
