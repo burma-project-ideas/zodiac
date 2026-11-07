@@ -12,24 +12,24 @@
 
 ### Landing page
 
-![Zodiac landing page with the constellation logo, grid background, purple actions, and reading workspace](docs/images/landing-desktop.png)
+![Zodiac landing page with the constellation logo, grid background, purple actions, and reading workspace](docs/images/landing-desktop.jpg)
 
 ### Zodiac reading
 
-![Leo birthday reading with Myanmar month, zodiac artwork, and purple personality radar chart](docs/images/reading-desktop.png)
+![Leo birthday reading with Myanmar month, zodiac artwork, and purple personality radar chart](docs/images/reading-desktop.jpg)
 
 ### Themed datepicker
 
 Fengyuan Chen Datepicker ကို App ရဲ့ Purple Color၊ Inter Font၊ Rounded Panel နဲ့ Selected Date / Focus Styles တွေနဲ့ ချိန်ညှိထားပါတယ်။ ရက်စွဲကို `YYYY-MM-DD` ပုံစံနဲ့ ကိုယ်တိုင်ရိုက်ထည့်နိုင်သလို Calendar ကနေလည်း ရွေးနိုင်ပါတယ်။
 
-![Desktop birthday calendar showing August 1990 with the 15th selected in purple](docs/images/datepicker-desktop.png)
+![Desktop birthday calendar showing August 1990 with the 15th selected in purple](docs/images/datepicker-desktop.jpg)
 
 <details>
 <summary>Mobile datepicker preview</summary>
 
 Mobile မှာ Calendar ကို Screen အလယ်မှာ ပြထားပြီး ရက်အားလုံးကို Viewport အတွင်းမှာ ရွေးနိုင်အောင် စီစဉ်ထားပါတယ်။
 
-<p align="center"><img src="docs/images/datepicker-mobile.png" width="390" alt="Mobile Zodiac reading with a centered purple birthday datepicker" /></p>
+<p align="center"><img src="docs/images/datepicker-mobile.jpg" width="390" alt="Mobile Zodiac reading with a centered purple birthday datepicker" /></p>
 
 </details>
 
@@ -171,4 +171,4 @@ App နဲ့ Microsoft Blazor Packages တွေကို .NET 10 သို့ 
 
 Zodiac ရဲ့ Logo က Purple Color နဲ့ Z Constellation၊ Orbit နဲ့ Star ကို ပေါင်းစပ်ထားတဲ့ Original Vector Mark ဖြစ်ပါတယ်။ Transparent SVG Master၊ Dark / White Variants၊ Favicon၊ App Icons နဲ့ Social Image တွေကို Master တစ်ခုတည်းကနေ Generate လုပ်ထားပါတယ်။ [Brand Assets နဲ့ ပြန်လည် Generate လုပ်နည်း](docs/brand/README.md) ကို ကြည့်နိုင်ပါတယ်။
 
-![Zodiac constellation logo on light and dark backgrounds, including favicon and small icon sizes](docs/images/logo-variants.png)
+![Zodiac constellation logo on light and dark backgrounds, including favicon and small icon sizes](docs/images/logo-variants.jpg)
