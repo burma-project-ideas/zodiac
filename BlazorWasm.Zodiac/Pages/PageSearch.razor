@@ -1,4 +1,4 @@
-﻿@using BlazorWasm.Zodiac.Data
+@using BlazorWasm.Zodiac.Data
 @using BlazorWasm.Zodiac.Models
 @if (!_isSearch)
 {
@@ -117,7 +117,7 @@ else
                         <div class="as_service_box text-center" style="height: 95%;">
                             <h3> ဒြပ် / ELEMENT </h3>
                             <h3> @_zodiacSign.Element </h3>
-                            <img src="images/elements/@(_zodiacSign.Element).png" alt="">
+                            <img src="@_zodiacSign.ElementImageUrl" alt="">
                         </div>
                     </div>
                 </div>
