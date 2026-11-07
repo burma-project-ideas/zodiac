@@ -2,7 +2,7 @@
 
 # Zodiac (ရာသီခွင်)
 
-မွေးနေ့ကို ရွေးချယ်ပြီး မိမိရဲ့ ရာသီခွင်၊ မြန်မာလ၊ ကိုယ်စားပြုဒြပ်၊ Personality Traits နဲ့ သက်ဆိုင်ရာ မြန်မာဘာသာအကြောင်းအရာတွေကို ကြည့်နိုင်တဲ့ **Blazor WebAssembly Project** ပါ။ [App ကို ဒီမှာ ဖွင့်နိုင်ပါတယ်](https://zodiac-omega-ruddy.vercel.app/)။
+မွေးနေ့ကို ရွေးချယ်ပြီး မိမိရဲ့ ရာသီခွင်၊ မြန်မာလ၊ ကိုယ်စားပြုဒြပ်၊ Personality Traits နဲ့ သက်ဆိုင်ရာ မြန်မာဘာသာအကြောင်းအရာတွေကို ကြည့်နိုင်တဲ့ **Blazor WebAssembly Project** ပါ။ [App ကို ဒီမှာ ဖွင့်နိုင်ပါတယ်](https://blazor-zodiac.vercel.app/)။
 
 [Burma Project Ideas](https://github.com/burma-project-ideas) အောက်မှာ နောက်လာမယ့်သူတွေ လေ့လာနိုင်ဖို့၊ ကိုယ်နှစ်သက်တဲ့ Programming Language နဲ့ ပြန်ရေးကြည့်နိုင်ဖို့ ထားပေးထားတာပါ။ App က Browser ထဲမှာ အလုပ်လုပ်ပြီး Account၊ Backend Server နဲ့ Database မလိုပါဘူး။
 
@@ -92,7 +92,7 @@ dotnet publish .\BlazorWasm.Zodiac\BlazorWasm.Zodiac.csproj -c Release -o .\arti
 
 Static Output က **`artifacts/publish/wwwroot`** ဖြစ်ပါတယ်။ Native WebAssembly Toolchain မလိုအောင် Publish Command မှာ `WasmBuildNative=false` သတ်မှတ်ထားပါတယ်။ App ကို HTTPS နဲ့ Host လုပ်ပြီး Static Files တွေကို ဦးစွာ Serve လုပ်ကာ ကျန် Route တွေအတွက် `index.html` ဆီ SPA Fallback သတ်မှတ်ပါ။
 
-GitHub Repository က Vercel Project **zodiac** နဲ့ ချိတ်ဆက်ထားပါတယ်။ **`main` ကို Push လုပ်ရင် Production App ကို အလိုအလျောက် Build / Deploy လုပ်ပါတယ်။** Public URL က [zodiac-omega-ruddy.vercel.app](https://zodiac-omega-ruddy.vercel.app/) ပါ။
+GitHub Repository က Vercel Project **zodiac** နဲ့ ချိတ်ဆက်ထားပါတယ်။ **`main` ကို Push လုပ်ရင် Production App ကို အလိုအလျောက် Build / Deploy လုပ်ပါတယ်။** Public URL က [blazor-zodiac.vercel.app](https://blazor-zodiac.vercel.app/) ပါ။
 
 Vercel ရဲ့ Root Directory ကို Repository Root၊ Framework Preset ကို **Other** ထားပါတယ်။ [`vercel.json`](vercel.json) က [`scripts/vercel-build.sh`](scripts/vercel-build.sh) ကို Run ပြီး SDK မရှိရင် Install လုပ်ကာ Blazor App ကို Publish လုပ်ပါတယ်။ Environment Variables နဲ့ Server Database မလိုပါဘူး။
 
