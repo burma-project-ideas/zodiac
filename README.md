@@ -32,7 +32,7 @@ The source app currently targets .NET 6, which is out of support. Its framework 
 
 Use the repository root as the Vercel Root Directory with Framework Preset **Other**. [`vercel.json`](vercel.json) runs [`scripts/vercel-build.sh`](scripts/vercel-build.sh), which installs a .NET 10 SDK when one is unavailable and publishes the source app. Vercel serves only `artifacts/publish/wwwroot`; filesystem routes serve assets before the Blazor fallback to `index.html`.
 
-To publish locally built files, upload the contents of `artifacts/publish/wwwroot` to the existing Vercel project **zodiac**. Do not upload the repository root as static content. For automatic deployments, connect this repository to that existing project under Settings → Git and select `main` as the production branch. A manual folder upload alone does not enable automatic deployment.
+To publish locally built files, upload the contents of `artifacts/publish/wwwroot` to the existing Vercel project **zodiac**. Do not upload the repository root as static content. The existing Vercel project is connected to `burma-project-ideas/zodiac`; pushes to `main` trigger production builds. The repository root remains the Root Directory. A manual folder upload alone does not enable automatic deployment.
 
 The UI uses ApexCharts from cdnjs and its bundled date picker, styles, and artwork. An internet connection is needed on the first visit. The app includes the source project's PWA service worker.
 
